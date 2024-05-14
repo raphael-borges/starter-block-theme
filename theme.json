@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/theme/v2/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "text": "#333333",
+      "background": "#ffffff"
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "Arial, sans-serif",
+        "fontSize": "16px"
+      }
+    }
+  }
+}
