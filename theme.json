@@ -14,11 +14,11 @@
 					"button": true,
 					"caption": true,
 					"custom": true,
-					"customDuotone": true,
-					"customGradient": true,
-					"defaultDuotone": true,
-					"defaultGradients": true,
-					"defaultPalette": true,
+					"customDuotone": false,
+					"customGradient": false,
+					"defaultDuotone": false,
+					"defaultGradients": false,
+					"defaultPalette": false,
 					"duotone": [],
 					"gradients": [],
 					"heading": true,
@@ -61,12 +61,12 @@
 					"fontSizes": [
 						{
 							"name": "Small",
-							"size": "14px",
+							"size": "16px",
 							"slug": "small"
 						},
 						{
 							"name": "Medium",
-							"size": "20px",
+							"size": "22px",
 							"slug": "medium"
 						},
 						{
@@ -93,12 +93,65 @@
 		},
 		"color": {
 			"background": "#ffffff",
+			"customDuotone": false,
+			"customGradient": false,
+			"defaultDuotone": false,
+			"defaultGradients": false,
+			"defaultPalette": false,
+			"palette": [
+				{
+					"color": "#e40134",
+					"name": "Vermelho",
+					"slug": "custom-vermelho"
+				},
+				{
+					"color": "#f59c00",
+					"name": "Amarelo",
+					"slug": "custom-amarelo"
+				},
+				{
+					"color": "#ee7203",
+					"name": "Laranja",
+					"slug": "custom-laranja"
+				},
+				{
+					"color": "#1a1a36",
+					"name": "Azul Escuro",
+					"slug": "custom-azul-escuro"
+				},
+				{
+					"color": "#965ca2",
+					"name": "Roxo",
+					"slug": "custom-roxo"
+				},
+				{
+					"color": "#ad97c8",
+					"name": "Lilas",
+					"slug": "custom-lilas"
+				},
+				{
+					"color": "#f7f1ff",
+					"name": "light",
+					"slug": "custom-light"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Branco",
+					"slug": "custom-branco"
+				}
+			],
 			"text": "#333333"
 		},
 		"typography": {
 			"fontFamilies": [
 				{
 					"fontFace": [
+						{
+							"fontFamily": "\"Open Sans\"",
+							"fontStyle": "normal",
+							"fontWeight": "800",
+							"src": "file:./assets/fonts/OpenSans-ExtraBold.ttf"
+						},
 						{
 							"fontFamily": "\"Open Sans\"",
 							"fontStyle": "normal",
@@ -141,12 +194,12 @@
 		},
 		"color": {
 			"background": "var(--wp--preset--color--white)",
-			"text": "#1a1a36"
+			"text": "var(--wp--preset--color--custom-azul-escuro)"
 		},
 		"elements": {
 			"button": {
 				"color": {
-					"background": "#ee7203"
+					"background": "var(--wp--preset--color--custom-laranja)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--open-sans)"
@@ -154,16 +207,44 @@
 			},
 			"caption": {
 				"color": {
-					"text": "#1a1a36"
+					"text": "var(--wp--preset--color--custom-azul-escuro)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--open-sans)"
 				}
 			},
+			"h1": {
+				"typography": {
+					"fontSize": "30px",
+					"fontStyle": "normal",
+					"fontWeight": "100"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "36px",
+					"fontStyle": "normal",
+					"fontWeight": "800"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "28px",
+					"fontStyle": "normal",
+					"fontWeight": "700"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontSize": "22px",
+					"fontStyle": "normal",
+					"fontWeight": "700"
+				}
+			},
 			"heading": {
 				"color": {
 					"background": "var(--wp--preset--color--white)",
-					"text": "#1a1a36"
+					"text": "var(--wp--preset--color--custom-azul-escuro)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--open-sans)"
@@ -171,7 +252,7 @@
 			},
 			"link": {
 				"color": {
-					"text": "#1a1a36"
+					"text": "var(--wp--preset--color--custom-azul-escuro)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--open-sans)"
