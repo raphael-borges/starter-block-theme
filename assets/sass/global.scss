@@ -4,6 +4,8 @@ body {
 :where(.wp-site-blocks) > *{
     margin-block-start: 5px;
 }
+
+
 // TIPOGRAFIA
 mark {
     padding: 0 5px;
@@ -12,6 +14,9 @@ mark {
     .hidden-md{
         display: none;
     }
+    .inverse-md {
+        flex-direction: column-reverse;
+    }
 }
 @media screen and (max-width: 577px) {
     .inverse-sm {
@@ -19,6 +24,27 @@ mark {
     }
     .hidden-sm{
         display: none;
+    }
+
+    // MENU
+    .wp-block-navigation__responsive-dialog{
+        padding: 0 2em;
+        .wp-block-navigation__responsive-container-close{
+            right: 20px;
+            font-size: 3em;
+        }
+        .wp-block-navigation__responsive-container-content{
+            padding: 5em 0 3em 0;
+            a{
+                font-size: 2em;
+            }
+            .cc-hide-on-desktop{
+                a{
+                    font-weight: 700;
+                    color: $cinza;
+                }
+            }
+        }
     }
 
 }
