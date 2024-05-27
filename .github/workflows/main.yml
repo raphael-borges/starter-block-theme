@@ -2,7 +2,7 @@
 on: 
   push:
     branches:
-      - main
+      - Loja-da-Criação
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -15,7 +15,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server:  ${{ secrets.ftp_host }}
-        username:  ${{ secrets.ftp_user }}
-        password: ${{ secrets.ftp_password }}
+        server:  ${{ secrets.ftp_host_loja }}
+        username:  ${{ secrets.ftp_user_loja }}
+        password: ${{ secrets.ftp_password_loja }}
         server-dir: /public_html/novo-site/wp-content/themes/lojacriacao/
