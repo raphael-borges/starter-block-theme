@@ -11,16 +11,11 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-
-    - name: Use Node.js 16
-      uses: actions/setup-node@v2
-      with:
-        node-version: '20'
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.lojadacriacao.com.br
-        username: lojadacriacaocom
-        password: 73hvtMxGcAGeTE
+        username: ${{ secrets.ftp_user_loja }}
+        password: ${{ secrets.ftp_password_loja }}
         server-dir: /public_html/novo-site/wp-content/themes/lojadacriacao/
