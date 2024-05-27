@@ -18,4 +18,4 @@ jobs:
         server:  ${{ secrets.ftp_host_loja }}
         username:  ${{ secrets.ftp_user_loja }}
         password: ${{ secrets.ftp_password_loja }}
-        server-dir: /public_html/novo-site/wp-content/themes/lojacriacao/
+        server-dir: /public_html/novo-site/wp-content/themes/lojadacriacao/
