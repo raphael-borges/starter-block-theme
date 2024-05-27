@@ -3,7 +3,7 @@ on:
     branches:
       - Loja-da-Criação
 
-name: 🚀 Deploy website on push
+name: 🚀 Loja-da-Criação on push
 
 jobs:
   web-deploy:
