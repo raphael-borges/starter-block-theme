@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-      - loja-da-criacao
+      - Loja-da-Criação
 
 name: 🚀 Deploy website on push
 
