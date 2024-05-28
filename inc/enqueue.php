@@ -97,11 +97,11 @@ function hook_critical_css()
 if (current_user_can('administrator')) {
     // Se o usuário for administrador, não faz nada
 } else {
-        // Adiciona a função para ser chamada no hook 'wp_head'
-        add_action('wp_head', 'hook_critical_css');
+        // // Adiciona a função para ser chamada no hook 'wp_head'
+        // add_action('wp_head', 'hook_critical_css');
 
-        // Adiciona a função para ser chamada no hook 'wp_enqueue_scripts'
-        add_action('wp_enqueue_scripts', 'remove_enqueued_scripts_and_styles', 9999);
+        // // Adiciona a função para ser chamada no hook 'wp_enqueue_scripts'
+        // add_action('wp_enqueue_scripts', 'remove_enqueued_scripts_and_styles', 9999);
 }
 
 /**
