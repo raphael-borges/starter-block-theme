@@ -25,6 +25,14 @@ function compileSass() {
     .pipe(gulp.dest('./css/'));
 }
 
+// Função para verificar e criar o diretório de saída
+function checkAndCreateOutputDir() {
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+    console.log(`Diretório '${outputDir}' criado com sucesso.`);
+  }
+}
+
 // Função para obter todas as páginas, posts e categorias
 async function fetchContent() {
   try {
@@ -70,6 +78,9 @@ async function removeUnusedCSS(url, filename) {
   });
 
   await browser.close();
+
+  // Verifica e cria o diretório de saída se necessário
+  checkAndCreateOutputDir();
 
   // Salvar o CSS em um arquivo
   fs.writeFileSync(path.join(outputDir, filename), unusedCSS);
