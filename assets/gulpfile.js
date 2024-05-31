@@ -4,6 +4,7 @@ const cleanCSS = require('gulp-clean-css');
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const path = require('path');
+const sass = require('gulp-sass')(require('node-sass'));
 
 // URL base da API REST do WordPress
 const baseUrl = 'http://localhost/bloco';
@@ -16,6 +17,13 @@ const apiUrls = [
 
 // Pasta onde os arquivos CSS serão salvos
 const outputDir = './css/critical/';
+
+// Função para compilar Sass
+function compileSass() {
+  return gulp.src('./sass/style.scss')
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./css/'));
+}
 
 // Função para obter todas as páginas, posts e categorias
 async function fetchContent() {
@@ -100,5 +108,6 @@ gulp.task('generate-unused-css', async function () {
   }
 });
 
-// Definir a task padrão
-gulp.task('default', gulp.series('generate-unused-css'));
+// Task para compilar Sass e depois gerar o CSS crítico
+gulp.task('compile-sass', compileSass);
+gulp.task('default', gulp.series('compile-sass', 'generate-unused-css'));

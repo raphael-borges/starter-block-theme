@@ -11,6 +11,7 @@ function theme_slug_setup()
 require_once get_template_directory() . '/inc/enqueue.php'; //Adicionar critical
 require_once get_template_directory() . '/inc/login.php'; //Customização de Login
 require_once get_template_directory() . '/inc/styles.php'; //Styles block
+require_once get_template_directory() . '/inc/gulp-button.php'; //Styles block
 
 
 function my_theme_load_theme_textdomain()
