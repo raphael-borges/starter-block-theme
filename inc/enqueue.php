@@ -1,57 +1,22 @@
 <?php
-function remove_enqueued_scripts_and_styles()
+
+function display_enqueued_scripts_and_styles()
 {
+    global $wp_scripts, $wp_styles;
+
     // Desenfileira todos os scripts
-    wp_dequeue_style('wp-block-library'); // Remove o estilo da biblioteca de blocos
-    remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
-    wp_dequeue_script('wp-block-template-skip-link');
+    foreach ($wp_scripts->queue as $script) {
+        wp_dequeue_script($script);
+    }
 
     // Desenfileira todos os estilos
-    wp_dequeue_style('wp-block-site-logo');
-    wp_dequeue_style('wp-block-site-logo-theme');
-    wp_dequeue_style('wp-block-navigation-link');
-    wp_dequeue_style('wp-block-navigation-link-theme');
-    wp_dequeue_style('wp-block-navigation');
-    wp_dequeue_style('wp-block-navigation-theme');
-    wp_dequeue_style('wp-block-group');
-    wp_dequeue_style('wp-block-group-theme');
-    wp_dequeue_style('wp-block-template-part');
-    wp_dequeue_style('wp-block-template-part-theme');
-    wp_dequeue_style('wp-block-heading');
-    wp_dequeue_style('wp-block-heading-theme');
-    wp_dequeue_style('wp-block-paragraph');
-    wp_dequeue_style('wp-block-paragraph-theme');
-    wp_dequeue_style('wp-block-spacer');
-    wp_dequeue_style('wp-block-spacer-theme');
-    wp_dequeue_style('wp-block-button');
-    wp_dequeue_style('wp-block-button-theme');
-    wp_dequeue_style('wp-block-buttons');
-    wp_dequeue_style('wp-block-buttons-theme');
-    wp_dequeue_style('wp-block-column');
-    wp_dequeue_style('wp-block-column-theme');
-    wp_dequeue_style('wp-block-image');
-    wp_dequeue_style('wp-block-image-theme');
-    wp_dequeue_style('wp-block-columns');
-    wp_dequeue_style('wp-block-columns-theme');
-    wp_dequeue_style('wp-block-separator');
-    wp_dequeue_style('wp-block-separator-theme');
-    wp_dequeue_style('wp-block-list-item');
-    wp_dequeue_style('wp-block-list-item-theme');
-    wp_dequeue_style('wp-block-list');
-    wp_dequeue_style('wp-block-list-theme');
-    wp_dequeue_style('wp-block-block');
-    wp_dequeue_style('wp-block-block-theme');
-    wp_dequeue_style('wp-block-table');
-    wp_dequeue_style('wp-block-table-theme');
-    wp_dequeue_style('wp-block-post-content');
-    wp_dequeue_style('wp-block-post-content-theme');
-    wp_dequeue_style('wp-block-latest-posts');
-    wp_dequeue_style('wp-block-latest-posts-theme');
-    wp_dequeue_style('wp-block-library');
-    wp_dequeue_style('core-block-supports');
-    wp_dequeue_style('wp-block-template-skip-link');
-    wp_dequeue_style('global-styles');
+    foreach ($wp_styles->queue as $style) {
+        wp_dequeue_style($style);
+    }
 }
+
+
+
 
 // Function where enqueue 
 function enqueue_custom_css($page_slug, $is_critical = false)
@@ -97,11 +62,11 @@ function hook_critical_css()
 if (current_user_can('administrator')) {
     // Se o usuário for administrador, não faz nada
 } else {
-        // // Adiciona a função para ser chamada no hook 'wp_head'
-        // add_action('wp_head', 'hook_critical_css');
-
-        // // Adiciona a função para ser chamada no hook 'wp_enqueue_scripts'
-        // add_action('wp_enqueue_scripts', 'remove_enqueued_scripts_and_styles', 9999);
+    // // Adiciona a função para ser chamada no hook 'wp_head'
+    // add_action('wp_head', 'hook_critical_css');
+    // // Adiciona a função acima para ser chamada no hook 'wp_enqueue_scripts'
+    // add_action('wp_enqueue_scripts', 'display_enqueued_scripts_and_styles', 9999);
+    
 }
 
 /**
