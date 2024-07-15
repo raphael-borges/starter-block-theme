@@ -80,154 +80,58 @@
 			]
 		},
 		"typography": {
-			"customFontSize": false,
+			"customFontSize": true,
 			"dropCap": false,
-			"fluid": true,
 			"fontFamilies": [
 				{
 					"fontFace": [
 						{
-							"fontFamily": "EBGaramond",
+							"fontFamily": "\"Poppins\"",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": [
-								"file:./fonts/EBGaramond-Regular.ttf"
-							]
+							"src": "url('file:./poppins-v21-latin-regular.woff2') format('woff2'), url('file:./poppins-v21-latin-regular.ttf') format('truetype')"
 						},
 						{
-							"fontFamily": "EBGaramond",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": [
-								"file:./fonts/EBGaramond-Bold.ttf"
-							]
-						},
-						{
-							"fontFamily": "EBGaramond",
+							"fontFamily": "\"Poppins\"",
+							"fontDisplay": "swap",
 							"fontStyle": "italic",
 							"fontWeight": "400",
-							"src": [
-								"file:./fonts/EBGaramond-Italic.ttf"
-							]
+							"src": "url('file:./poppins-v21-latin-italic.woff2') format('woff2'), url('file:./poppins-v21-latin--italic.ttf') format('truetype')"
 						},
 						{
-							"fontFamily": "EBGaramond",
-							"fontStyle": "italic",
-							"fontWeight": "700",
-							"src": [
-								"file:./fonts/EBGaramond-BoldItalic.ttf"
-							]
-						}
-					],
-					"fontFamily": "\"EBGaramond\", sans-serif",
-					"name": "EB Garamond",
-					"slug": "ebgaramond"
-				},
-				{
-					"fontFace": [
-						{
-							"fontFamily": "Inter",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": [
-								"file:./fonts/Inter-Regular.ttf"
-							]
-						},
-						{
-							"fontFamily": "Inter",
+							"fontFamily": "\"Poppins\"",
+							"fontDisplay": "swap",
 							"fontStyle": "normal",
 							"fontWeight": "700",
-							"src": [
-								"file:./fonts/Inter-Bold.ttf"
-							]
+							"src": "url('file:./poppins-v21-latin-700.woff2') format('woff2'), url('file:./poppins-v21-latin-700.ttf') format('truetype')"
 						}
 					],
-					"fontFamily": "\"Inter\", serif",
-					"name": "Inter",
-					"slug": "inter"
+					"fontFamily": "\"Poppins\"",
+					"name": "Poppins",
+					"slug": "open-sans"
 				}
 			],
 			"fontSizes": [
 				{
-					"fluid": {
-						"min": "0.94rem",
-						"max": "1rem"
-					},
-					"size": "1rem",
-					"slug": "sm",
-					"name": "Small"
+					"name": "Small",
+					"size": "1em",
+					"slug": "small"
 				},
 				{
-					"fluid": {
-						"min": "1.13rem",
-						"max": "1.25rem"
-					},
-					"size": "1.25rem",
-					"slug": "paragraph",
-					"name": "Paragraph"
+					"name": "Medium",
+					"size": "1.2em",
+					"slug": "medium"
 				},
 				{
-					"fluid": {
-						"min": "1.35rem",
-						"max": "1.56rem"
-					},
-					"size": "1.56rem",
-					"slug": "h6",
-					"name": "H6"
+					"name": "Large",
+					"size": "2em",
+					"slug": "large"
 				},
 				{
-					"fluid": {
-						"min": "1.62rem",
-						"max": "1.95rem"
-					},
-					"size": "1.95rem",
-					"slug": "h5",
-					"name": "H5"
-				},
-				{
-					"fluid": {
-						"min": "1.94rem",
-						"max": "2.44rem"
-					},
-					"size": "2.44rem",
-					"slug": "h4",
-					"name": "H4"
-				},
-				{
-					"fluid": {
-						"min": "2.33rem",
-						"max": "3.05rem"
-					},
-					"size": "3.05rem",
-					"slug": "h3",
-					"name": "H3"
-				},
-				{
-					"fluid": {
-						"min": "2.8rem",
-						"max": "3.82rem"
-					},
-					"size": "3.82rem",
-					"slug": "h2",
-					"name": "H2"
-				},
-				{
-					"fluid": {
-						"min": "3.36rem",
-						"max": "4.77rem"
-					},
-					"size": "4.77rem",
-					"slug": "large",
-					"name": "Large"
-				},
-				{
-					"fluid": {
-						"min": "4.03rem",
-						"max": "5.96rem"
-					},
-					"size": "5.96rem",
-					"slug": "h1",
-					"name": "H1"
+					"name": "Extra Large",
+					"size": "2.4em",
+					"slug": "x-large"
 				}
 			]
 		},
