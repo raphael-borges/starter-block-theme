@@ -4,7 +4,7 @@
     ".gitattributes": true,
     "node_modules": true,
     ".github": true,
-    "screenshot.png": true,
+    "screenshot.png": true
     "*/node_modules": true,
     "*/package.json": true,
     "*/package-lock.json": true
