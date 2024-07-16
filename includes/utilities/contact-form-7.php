@@ -1,6 +1,6 @@
 <?php
 // Optimize contact-form-7 Enqueue
-function dd_wpcf7_dequeue_scripts()
+function start_wpcf7_dequeue_scripts()
 {
 
     $load_scripts = false;
@@ -19,4 +19,3 @@ function dd_wpcf7_dequeue_scripts()
         wp_dequeue_style('contact-form-7');
     }
 }
-add_action('wp_enqueue_scripts', 'dd_wpcf7_dequeue_scripts', 99);

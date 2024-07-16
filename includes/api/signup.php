@@ -1,10 +1,11 @@
 <?php
 
-function up_rest_api_signup_handler($request) {
+function start_rest_api_signup_handler($request)
+{
   $response = ['status' => 1];
   $params = $request->get_json_params();
 
-  if(
+  if (
     !isset($params['email'], $params['username'], $params['password']) ||
     empty($params['email']) ||
     empty($params['username']) ||
@@ -17,7 +18,7 @@ function up_rest_api_signup_handler($request) {
   $username = sanitize_text_field($params['username']);
   $password = sanitize_text_field($params['password']);
 
-  if(
+  if (
     username_exists($username) ||
     !is_email($email) ||
     email_exists($email)
@@ -31,7 +32,7 @@ function up_rest_api_signup_handler($request) {
     'user_email' => $email
   ]);
 
-  if(is_wp_error($userID)) {
+  if (is_wp_error($userID)) {
     return $response;
   }
 

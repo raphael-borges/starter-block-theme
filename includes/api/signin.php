@@ -1,10 +1,11 @@
 <?php
 
-function up_rest_api_signin_handler($request) {
+function start_rest_api_signin_handler($request)
+{
   $response = ['status' => 1];
   $params = $request->get_json_params();
 
-  if(
+  if (
     !isset($params['user_login'], $params['password']) ||
     empty($params['user_login']) ||
     empty($params['password'])
@@ -21,7 +22,7 @@ function up_rest_api_signin_handler($request) {
     'remember' => true
   ]);
 
-  if(is_wp_error($user)){
+  if (is_wp_error($user)) {
     return $response;
   }
 
