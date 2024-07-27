@@ -1,0 +1,3 @@
+.is-style-checkicon::marker {
+    content: url("'. get_template_directory_uri() .'/assets/images/icons/check-solid.svg");
+}
