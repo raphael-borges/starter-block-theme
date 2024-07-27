@@ -15,7 +15,6 @@ function start_disable_emojis()
     add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
     add_filter('wp_resource_hints', 'disable_emojis_remove_dns_prefetch', 10, 2);
 }
-add_action('init', 'start_disable_emojis');
 
 /**
  * Filter function used to remove the tinymce emoji plugin.

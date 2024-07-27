@@ -13,3 +13,12 @@ function start_enqueue_scripts()
     'before' // 'after'
   );
 }
+
+function start_js_check_scripts()
+{
+?>
+  <script>
+    document.documentElement.className += ' js';
+  </script>
+<?php
+}

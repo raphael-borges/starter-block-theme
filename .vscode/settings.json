@@ -1,14 +1,12 @@
 {
-  "files.exclude": {
-    ".gitignore": true,
-    ".gitattributes": true,
-    ".editorconfig":true,
-    "node_modules": true,
-    ".github": true,
-    "screenshot.png": true
-    "*/node_modules": true,
-    "*/package.json": true,
-    "*/package-lock.json": true
-    "*/.gitignore": true,
-  }
+	"files.exclude": {
+		".gitignore": true,
+		".gitattributes": true,
+		".editorconfig": true,
+		".github": true,
+		"screenshot.png": true,
+		"package-lock.json": true,
+		"node_modules": true
+		// "*/package.json": true,
+	}
 }
