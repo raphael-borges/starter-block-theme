@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "starter-block-theme/slider",
+    "title": "Slider",
+    "category": "start-category",
+    "description": "Custom Slider",
+    "keywords": [
+        "slider",
+        "images",
+        "photos",
+        "gallery"
+    ],
+    "supports": {
+        "html": false
+    },
+    "version": "1.0.0",
+    "textdomain": "starter-block-theme",
+    "attributes": {
+        "images": {
+            "type": "array",
+            "default": []
+        },
+        "uniqueId": {
+            "type": "string"
+        }
+    },
+    "editorScript": "file:./index.js",
+    "viewScript": [
+        "file:./frontend.js",
+        "starter-slider"
+    ],
+    "viewStyle": [
+        "file:./style-index.css",
+        "starter-slider"
+    ],
+    "editorStyle": [
+        "file:./index.css",
+        "starter-slider"
+    ]
+}

@@ -1,0 +1,21 @@
+@use 'style';
+
+// EDITOR
+.preview-galery-slider-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.preview-galery-slider-block li {
+    border-radius: 50%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.slide li:first-child {
+    opacity: 1;
+    transform: scale(1);
+}

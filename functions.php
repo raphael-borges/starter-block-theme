@@ -24,6 +24,7 @@ foreach ($allFiles as $filename) {
 // Hooks
 
 add_action('wp_head', 'start_js_check_scripts'); // Check if js is enable - includes/enqueue.php
+add_action('wp_enqueue_scripts', 'start_enqueue_scripts');  // Add Scripts Theme - includes/enqueue.php
 add_action('wp_enqueue_scripts', 'start_enqueue_styles');  // Add Styles Theme - includes/enqueue.php
 // add_action('wp_enqueue_scripts', 'start_enqueue_api_scripts'); // - includes/enqueue.php
 add_action('init', 'start_block_init'); //  - blocks/register-blocks.php
