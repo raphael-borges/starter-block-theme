@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "starter-block-theme/nav-theme",
+    "title": "Navigation",
+    "category": "start-category",
+    "description": "Custom Nav",
+    "keywords": [
+        "navigation",
+        "menu"
+    ],
+    "supports": {
+        "html": false
+    },
+    "version": "1.0.0",
+    "textdomain": "starter-block-theme",
+    "attributes": {},
+    "editorScript": "file:./index.js",
+    "viewScript": [
+        "file:./frontend.js",
+        "starter-navigation"
+    ],
+    "viewStyle": [
+        "file:./style-index.css",
+        "starter-navigation"
+    ],
+    "editorStyle": [
+        "file:./index.css",
+        "starter-navigation"
+    ]
+}
