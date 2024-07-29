@@ -4,7 +4,7 @@ function start_block_init()
 {
 	$blocks = [
 		['name' => 'block'],
-		['name' => 'form']
+		// ['name' => 'form']
 		// ['name' => 'search-form', 'options' => [
 		// 	'render_callback' => 'up_search_form_render_cb'
 		// ]]

@@ -6,8 +6,8 @@
 		".github": true,
 		"screenshot.png": true,
 		"package-lock.json": true,
+		// "*/package.json": true,
 		"bin": true,
 		"node_modules": true
-		// "*/package.json": true,
 	}
 }
