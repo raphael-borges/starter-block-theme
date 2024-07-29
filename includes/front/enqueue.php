@@ -17,9 +17,9 @@ function start_enqueue_api_scripts()
 function start_js_check_scripts()
 {
 ?>
-<script>
-document.documentElement.className += ' js';
-</script>
+  <script>
+    document.documentElement.className += ' js';
+  </script>
 <?php
 }
 
@@ -32,4 +32,3 @@ function start_enqueue_scripts()
 {
   wp_enqueue_script('start_theme_script', START_THEME_URL . '/assets/js/index.min.js', array(), START_THEME_VERSION, true);
 }
-add_action('wp_enqueue_scripts', 'start_enqueue_scripts');
