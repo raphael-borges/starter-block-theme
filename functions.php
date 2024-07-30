@@ -9,7 +9,7 @@ define('START_THEME_DIR', get_template_directory());
 define('START_THEME_URL', get_template_directory_uri());
 define('START_THEME_VERSION', wp_get_theme()->get('Version'));
 
-
+echo wp_get_theme()->get( 'TextDomain' );
 
 // Includes
 
@@ -23,6 +23,7 @@ foreach ($allFiles as $filename) {
 
 // Hooks
 
+load_theme_textdomain('starter-block-theme', START_THEME_DIR . '/languages');
 add_action('wp_head', 'start_js_check_scripts'); // Check if js is enable - includes/enqueue.php
 add_action('wp_enqueue_scripts', 'start_enqueue_scripts');  // Add Scripts Theme - includes/enqueue.php
 add_action('wp_enqueue_scripts', 'start_enqueue_styles');  // Add Styles Theme - includes/enqueue.php

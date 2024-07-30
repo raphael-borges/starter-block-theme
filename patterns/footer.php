@@ -8,5 +8,5 @@
  */
 ?>
 <!-- wp:paragraph -->
-<p><?php esc_html_e('Powered by Raphael Borges', 'starter-block-theme'); ?></p>
+<p><?php esc_html_e('Powered by Raphael Borges', wp_get_theme()->get('TextDomain')); ?></p>
 <!-- /wp:paragraph -->
