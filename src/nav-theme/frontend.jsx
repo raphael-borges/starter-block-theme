@@ -14,16 +14,15 @@ burgerMenu.addEventListener("click", () => {
 });
 
 // Toggle to show and hide dropdown menu
-const dropdown = document.querySelectorAll(".dropdown");
+const dropdown = document.querySelectorAll(".navbar-theme-block .has-child");
 
 dropdown.forEach((item) => {
-	const dropdownToggle = item.querySelector(".dropdown-toggle");
+	const dropdownToggle = item.querySelector(".submenu-plus");
 
 	dropdownToggle.addEventListener("click", () => {
 		const dropdownShow = document.querySelector(".dropdown-show");
 		toggleDropdownItem(item);
 
-		// Remove 'dropdown-show' class from other dropdown
 		if (dropdownShow && dropdownShow != item) {
 			toggleDropdownItem(dropdownShow);
 		}
@@ -32,7 +31,9 @@ dropdown.forEach((item) => {
 
 // Function to display the dropdown menu
 const toggleDropdownItem = (item) => {
-	const dropdownContent = item.querySelector(".dropdown-content");
+	const dropdownContent = item.querySelector(
+		".wp-block-navigation__submenu-container",
+	);
 
 	// Remove other dropdown that have 'dropdown-show' class
 	if (item.classList.contains("dropdown-show")) {
@@ -48,9 +49,11 @@ const toggleDropdownItem = (item) => {
 // Fixed dropdown menu on window resizing
 window.addEventListener("resize", () => {
 	if (window.innerWidth > 992) {
-		document.querySelectorAll(".dropdown-content").forEach((item) => {
-			item.removeAttribute("style");
-		});
+		document
+			.querySelectorAll(".wp-block-navigation__submenu-container")
+			.forEach((item) => {
+				item.removeAttribute("style");
+			});
 		dropdown.forEach((item) => {
 			item.classList.remove("dropdown-show");
 		});
@@ -64,5 +67,16 @@ window.addEventListener("resize", () => {
 			navbarMenu.classList.remove("is-active");
 			burgerMenu.classList.remove("is-active");
 		}
+	}
+});
+
+window.addEventListener("resize", () => {
+	if (window.innerWidth > 992) {
+		document.querySelectorAll(".has-child").forEach((item) => {
+			const linkMenu = item.querySelectorAll(
+				".wp-block-navigation-item__content",
+			);
+			console.log(linkMenu);
+		});
 	}
 });

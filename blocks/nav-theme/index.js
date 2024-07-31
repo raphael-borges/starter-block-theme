@@ -45,21 +45,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./editor.scss */ "./src/nav-theme/editor.scss");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
 /* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
-/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./block.json */ "./src/nav-theme/block.json");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/data */ "@wordpress/data");
+/* harmony import */ var _wordpress_data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_data__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
-function Edit() {
+
+
+function Edit(attributes, className, setAttributes) {
+  const ALLOWED_BLOCKS = ["core/navigation-link", "core/navigation-submenu"];
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useBlockProps)();
+  const innerBlocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.useInnerBlocksProps)();
+  const blocks = (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_5__.select)("core/editor").getBlocks();
+  console.log({
+    ...innerBlocksProps
+  }, {
+    ...blockProps
+  });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_3__.useBlockProps)()
+    ...blockProps
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("nav", {
     className: "navbar-theme"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     className: "burger",
     id: "burger",
-    "aria-label": "Abrir menu"
+    "aria-label": (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)("Open Menu", _block_json__WEBPACK_IMPORTED_MODULE_3__.textdomain),
+    "aria-expanded": "false"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
     className: "burger-line"
   }), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
@@ -71,96 +86,9 @@ function Edit() {
     id: "menu"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
     className: "menu"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "menu-item"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "menu-link"
-  }, "Home")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "menu-item dropdown"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-toggle menu-link"
-  }, "Courses ", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-chevron-down"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-content"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-column"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-group"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-title"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-icon"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-code"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "text-base font-medium"
-  }, "Web Development")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "dropdown-items"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Web Development Bootcamp")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "HTML and CSS for Beginner")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Complete Modern JavaScript")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Complete React with Redux")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-group"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-title"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-icon"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-devices"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "text-base font-medium"
-  }, "Web Design")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "dropdown-items"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Web Design Bootcamp")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Responsive Web Design")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Figma for Web Designer")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Webflow for Beginners")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-group"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-title"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-icon"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-bookmark"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "text-base font-medium"
-  }, "Certification")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "dropdown-items"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Free Certificates")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Courses Certificates")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Premium Certificates"))))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "menu-item"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "menu-link"
-  }, "Support"))))));
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_4__.InnerBlocks, {
+    allowedBlocks: ALLOWED_BLOCKS
+  })))));
 }
 
 /***/ }),
@@ -217,6 +145,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function save() {
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save({
+    className: "menu"
+  });
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("nav", {
     className: "navbar-theme"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
@@ -234,97 +165,8 @@ function save() {
     className: "navbar-theme-block",
     id: "menu"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "menu"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "menu-item"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "menu-link"
-  }, "Home")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "menu-item dropdown"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-toggle menu-link"
-  }, "Courses ", (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-chevron-down"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-content"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-column"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-group"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-title"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-icon"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-code"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "text-base font-medium"
-  }, "Web Development")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "dropdown-items"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Web Development Bootcamp")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "HTML and CSS for Beginner")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Complete Modern JavaScript")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Complete React with Redux")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-group"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-title"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-icon"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-devices"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "text-base font-medium"
-  }, "Web Design")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "dropdown-items"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Web Design Bootcamp")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Responsive Web Design")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Figma for Web Designer")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Webflow for Beginners")))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-group"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "dropdown-title"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "dropdown-icon"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("i", {
-    className: "bx bx-bookmark"
-  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("span", {
-    className: "text-base font-medium"
-  }, "Certification")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("ul", {
-    className: "dropdown-items"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Free Certificates")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Courses Certificates")), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", null, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "dropdown-link"
-  }, "Premium Certificates"))))))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("li", {
-    className: "menu-item"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
-    href: "#",
-    className: "menu-link"
-  }, "Support"))))));
+    ...blockProps
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null)))));
 }
 
 /***/ }),
@@ -380,6 +222,16 @@ module.exports = window["wp"]["blockEditor"];
 /***/ ((module) => {
 
 module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/data":
+/*!******************************!*\
+  !*** external ["wp","data"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["data"];
 
 /***/ }),
 
