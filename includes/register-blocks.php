@@ -3,8 +3,8 @@
 function start_block_init()
 {
 	$blocks = [
-		['name' => 'block'],
-		['name' => 'slider']
+		['name' => 'slider'],
+		['name' => 'nav-theme']
 		// ['name' => 'search-form', 'options' => [
 		// 	'render_callback' => 'up_search_form_render_cb'
 		// ]]
@@ -19,15 +19,14 @@ function start_block_init()
 // Registre Theme Category
 function start_block_categories($block_categories, $editor_context)
 {
-	if (!empty($editor_context->post)) {
-		array_unshift(
-			$block_categories,
-			array(
-				'slug'  => 'start-category',
-				'title' => __('Theme', 'start-blocks-category'),
-				'icon'  => null,
-			)
-		);
-	}
+	array_unshift(
+		$block_categories,
+		array(
+			'slug'  => 'start-category',
+			'title' => __('Theme', 'start-blocks-category'),
+			'icon'  => null,
+		)
+	);
+
 	return $block_categories;
 }

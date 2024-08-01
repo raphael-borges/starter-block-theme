@@ -1,0 +1,204 @@
+.navbar-theme {
+    position: relative;
+}
+
+.navbar-theme-block {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    overflow: auto;
+    pointer-events: none;
+    background-color: var(--wp--preset--color--background);
+    transition: opacity 0.4s ease;
+    z-index: 2;
+
+    &.is-active {
+        opacity: 1;
+        pointer-events: initial;
+        padding-bottom: 24px;
+    }
+}
+
+.wp-block-starter-block-theme-nav-theme {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+
+    .wp-block-navigation-item {
+        padding: 8px;
+
+        .wp-block-navigation-item__content {
+            color: var(--wp--preset--color--foreground)
+        }
+
+    }
+
+    .current-menu-item {
+        .wp-block-navigation-item__content {
+            color: var(--wp--preset--color--primary);
+        }
+    }
+
+    .wp-block-navigation-submenu {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 2px;
+
+        .wp-block-navigation-item__content {
+            order: 1;
+        }
+
+        .wp-block-navigation__submenu-container {
+            order: 3;
+        }
+
+        .submenu-plus {
+            order: 2;
+            border: 0;
+            font-weight: 700;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        &.dropdown-show {
+            .wp-block-navigation__submenu-container {
+                opacity: 1;
+            }
+        }
+
+        .wp-block-navigation__submenu-container {
+            opacity: 0;
+            height: 0;
+            pointer-events: none;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            padding: 0;
+            transition: all ease-out .2s;
+
+            .wp-block-navigation-item {
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+// Responsive media breakpoint
+@media screen and (min-width: 62rem) {
+    .navbar-theme-block {
+        position: initial;
+        overflow: visible;
+        opacity: 1;
+        pointer-events: visible;
+        background: none;
+        transition: none;
+
+    }
+
+    .wp-block-starter-block-theme-nav-theme {
+        flex-direction: initial;
+        list-style: none;
+        gap: 16px;
+        position: relative;
+        overflow: visible;
+
+        .wp-block-navigation-submenu {
+            position: relative;
+
+            &:hover {
+                color: var(--wp--preset--color--primary);
+            }
+
+            &:hover>.wp-block-navigation__submenu-container {
+                opacity: 1;
+                overflow: auto;
+                pointer-events: visible;
+                height: initial;
+                padding: 8px;
+            }
+
+            .wp-block-navigation__submenu-container {
+                position: absolute;
+                height: initial;
+                left: -16px;
+                top: 0px;
+                overflow: visible;
+                min-width: 150px;
+                left: 0;
+                top: 100%;
+            }
+
+
+        }
+
+    }
+}
+
+.burger {
+    position: absolute;
+    right: 0;
+    top: -4rem;
+    margin: 0 16px;
+    cursor: pointer;
+    user-select: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    outline: none;
+    visibility: visible;
+    background-color: transparent;
+
+    &-line {
+        position: absolute;
+        display: block;
+        right: 0;
+        width: 100%;
+        height: 2.15px;
+        opacity: 1;
+        rotate: 0deg;
+        border-radius: 0.15rem;
+        background-color: var(--wp-admin-theme-color);
+        transition: all 0.3s ease;
+
+        &:nth-child(1) {
+            top: 0px;
+        }
+
+        &:nth-child(2) {
+            top: 0.5rem;
+            width: 70%;
+        }
+
+        &:nth-child(3) {
+            top: 1rem;
+        }
+    }
+
+    &.is-active>.burger-line {
+        &:nth-child(1) {
+            top: 0.5rem;
+            rotate: 135deg;
+        }
+
+        &:nth-child(2) {
+            opacity: 0;
+        }
+
+        &:nth-child(3) {
+            top: 0.5rem;
+            rotate: -135deg;
+        }
+    }
+}
+
+// Responsive media breakpoint
+@media screen and (min-width: 62rem) {
+    .burger {
+        display: none;
+        visibility: hidden;
+    }
+}

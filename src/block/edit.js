@@ -4,6 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
 import { __ } from "@wordpress/i18n";
+import metadata from "./block.json";
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -32,7 +33,7 @@ import "./editor.scss";
 export default function Edit() {
 	return (
 		<p {...useBlockProps()}>
-			{__("Start Blocks – hello from the editor!", "starter-block-theme")}
+			{__("Start Blocks – hello from the editor!", metadata.textdomain)}
 		</p>
 	);
 }
