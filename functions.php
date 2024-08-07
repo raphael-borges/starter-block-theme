@@ -11,8 +11,8 @@ define('START_THEME_VERSION', wp_get_theme()->get('Version'));
 
 // Includes
 
-$rootFiles = glob(START_THEME_DIR . '/includes/*.php');
-$subdirectoryFiles = glob(START_THEME_DIR . '/includes/**/*.php');
+$includesFiles = glob(START_THEME_DIR . '/includes/*.php');
+$includesSubDiretoryFiles = glob(START_THEME_DIR . '/includes/**/*.php');
 $stylesDiretoryFiles = glob(START_THEME_DIR . '/styles/*php');
 $allFiles = array_merge($includesFiles, $includesSubDiretoryFiles, $stylesDiretoryFiles);
 
