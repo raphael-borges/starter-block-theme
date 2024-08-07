@@ -13,7 +13,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start --webpack-src-dir=src --output-path=blocks",
-		"compile-assets": "webpack --config bin/webpack.config.js --watch"
+		"compile-assets": "webpack --config bin/webpack.config.main.js --watch"
 	},
 	"files": [
 		"assets",
@@ -25,6 +25,7 @@
 		"templates",
 		"functions.php",
 		"style.css",
+		"screenshot.png",
 		"theme.json"
 	],
 	"devDependencies": {
