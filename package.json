@@ -13,7 +13,7 @@
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
 		"start": "wp-scripts start --webpack-src-dir=src --output-path=blocks",
-		"compile-assets": "webpack --config bin/webpack.config.main.js --watch"
+		"compile-assets": "webpack --config webpack/webpack.config.main.js --watch"
 	},
 	"files": [
 		"assets",
@@ -29,9 +29,9 @@
 		"theme.json"
 	],
 	"devDependencies": {
-		"@wordpress/scripts": "^27.9.0"
+		"@wordpress/scripts": "^30.4.0"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^10.4.0"
+		"@wordpress/icons": "^10.11.0"
 	}
 }

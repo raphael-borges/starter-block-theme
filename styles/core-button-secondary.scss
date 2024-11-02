@@ -1,0 +1,28 @@
+.is-style-secondary .wp-block-button__link {
+    border: 2px solid var(--wp--preset--color--new-azul-dark);
+    background: var(--wp--preset--color--new-azul);
+    color: var(--wp--preset--color--white);
+    box-shadow: var(--wp--preset--shadow--start-default);
+    transition: all ease-in .1s;
+}
+
+.is-style-secondary .wp-block-button__link:hover {
+    background: var(--wp--preset--color--new-azul-medium);
+    box-shadow: var(--wp--preset--shadow--start-hover);
+}
+
+.is-style-secondary .wp-block-button__link:active {
+    background: var(--wp--preset--color--new-azul-dark);
+    box-shadow: none;
+}
+
+.is-style-secondary .wp-block-button__link:focus {
+    border: 2px solid var(--wp--preset--color--new-azul-dark);
+    color: var(--wp--preset--color--white);
+    background: var(--wp--preset--color--new-azul-dark);
+    box-shadow: none;
+}
+
+.is-style-secondary .is-style-primary img {
+    vertical-align: -1px;
+}
