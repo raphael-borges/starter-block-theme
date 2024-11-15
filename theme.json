@@ -10,16 +10,6 @@
 			"duotone": [],
 			"palette": [
 				{
-					"color": "#ffffff",
-					"name": "Background",
-					"slug": "background"
-				},
-				{
-					"color": "#191836",
-					"name": "Foreground",
-					"slug": "foreground"
-				},
-				{
 					"color": "#f59c00",
 					"name": "Primary",
 					"slug": "primary"
@@ -95,41 +85,25 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/poppins-v21-latin-regular.woff2"
-							]
-						},
-						{
-							"fontFamily": "Poppins",
-							"fontStyle": "normal",
-							"fontWeight": "700",
-							"src": [
-								"file:./assets/fonts/poppins-v21-latin-700.woff2"
-							]
-						},
-						{
-							"fontFamily": "Poppins",
+							"fontFamily": "\"Open Sans\"",
 							"fontStyle": "italic",
-							"fontWeight": "400",
+							"fontWeight": "300 800",
 							"src": [
-								"file:./assets/fonts/poppins-v21-latin-300italic.woff2"
+								"file:./assets/fonts/open-sans/open-sans-300-800-italic.ttf"
 							]
 						},
 						{
-							"fontFamily": "Poppins",
-							"fontStyle": "italic",
-							"fontWeight": "700",
+							"fontFamily": "\"Open Sans\"",
+							"fontStyle": "normal",
+							"fontWeight": "300 800",
 							"src": [
-								"file:./assets/fonts/poppins-v21-latin-700italic.woff2"
+								"file:./assets/fonts/open-sans/open-sans-300-800-normal.ttf"
 							]
 						}
 					],
-					"fontFamily": "\"Poppins\", sans-serif",
-					"name": "Poppins",
-					"slug": "poppins"
+					"fontFamily": "\"Open Sans\", sans-serif",
+					"name": "Open Sans",
+					"slug": "open-sans"
 				}
 			],
 			"fontSizes": [
@@ -225,45 +199,45 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--background)",
-			"text": "var(--wp--preset--color--foreground)"
+			"background": "var(--wp--preset--color--white)",
+			"text": "var( --wp--preset--color--black)"
 		},
 		"elements": {
 			"button": {
 				":active": {
 					"color": {
-						"background": "var(--wp--preset--color--background)",
+						"background": "var(--wp--preset--color--white)",
 						"text": "var(--wp--preset--color--secondary)"
 					}
 				},
 				":focus": {
 					"border": {
-						"color": "var(--wp--preset--color--background)"
+						"color": "var(--wp--preset--color--white)"
 					},
 					"color": {
 						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--background)"
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":hover": {
 					"color": {
 						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--background)"
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				":visited": {
 					"color": {
-						"text": "var(--wp--preset--color--background)"
+						"text": "var(--wp--preset--color--white)"
 					}
 				},
 				"border": {
-					"color": "var(--wp--preset--color--background)",
+					"color": "var(--wp--preset--color--white)",
 					"radius": "0px",
 					"width": "2px"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--background)"
+					"text": "var(--wp--preset--color--white)"
 				},
 				"spacing": {
 					"padding": {
@@ -316,7 +290,7 @@
 			"link": {
 				":active": {
 					"color": {
-						"text": "var(--wp--preset--color--foreground)"
+						"text": "var( --wp--preset--color--black)"
 					},
 					"typography": {
 						"textDecoration": "none"
@@ -329,7 +303,7 @@
 				},
 				":hover": {
 					"color": {
-						"text": "var(--wp--preset--color--foreground)"
+						"text": "var( --wp--preset--color--black)"
 					},
 					"typography": {
 						"textDecoration": "underline"
@@ -347,7 +321,7 @@
 			"blockGap": "var(--wp--custom--block-gap)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--poppins)",
+			"fontFamily": "var(--wp--preset--font-family--open-sans)",
 			"fontSize": "var(--wp--preset--font-size--paragraph)",
 			"lineHeight": "1.6"
 		}
@@ -375,5 +349,5 @@
 		}
 	],
 	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.6/theme.json"
+	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
 }

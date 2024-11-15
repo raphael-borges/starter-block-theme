@@ -33,5 +33,14 @@
 	},
 	"dependencies": {
 		"@wordpress/icons": "^10.11.0"
-	}
+	},
+	"keywords": [],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/raphael-borges/starter-block-theme.git"
+	},
+	"bugs": {
+		"url": "https://github.com/raphael-borges/starter-block-theme/issues"
+	},
+	"homepage": "https://github.com/raphael-borges/starter-block-theme#readme"
 }
