@@ -29,10 +29,10 @@
 		"theme.json"
 	],
 	"devDependencies": {
-		"@wordpress/scripts": "^30.4.0"
+		"@wordpress/scripts": "^30.7.0"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^10.11.0"
+		"@wordpress/icons": "^10.9.0"
 	},
 	"keywords": [],
 	"repository": {
