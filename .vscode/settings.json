@@ -9,6 +9,8 @@
 		"*/package.json": true,
 		// "bin": true,
 		"node_modules": true,
-		"blocks": true
+		"blocks": true,
+		"DS_Store": true,
+		"*.log": true
 	}
 }
