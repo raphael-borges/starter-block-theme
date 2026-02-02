@@ -30,11 +30,11 @@
 	],
 	"devDependencies": {
 		"@babel/runtime": "^7.28.4",
-		"@wordpress/scripts": "^30.24.0",
+		"@wordpress/scripts": "^31.4.0",
 		"webpack-dev-server": "^5.2.2"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^10.31.0"
+		"@wordpress/icons": "^11.6.0"
 	},
 	"keywords": [],
 	"repository": {

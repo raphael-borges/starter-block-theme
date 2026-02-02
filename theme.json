@@ -1,4 +1,6 @@
 {
+	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+	"version": 3,
 	"settings": {
 		"appearanceTools": true,
 		"color": {
@@ -10,14 +12,34 @@
 			"duotone": [],
 			"palette": [
 				{
-					"color": "#f59c00",
-					"name": "Primary",
-					"slug": "primary"
+					"color": "#111111",
+					"name": "Preto",
+					"slug": "preto"
 				},
 				{
-					"color": "#e40134",
-					"name": "Secondary",
-					"slug": "secondary"
+					"color": "#52A6E5",
+					"name": "Azul",
+					"slug": "azul"
+				},
+				{
+					"color": "#81C9FF",
+					"name": "Azul Claro",
+					"slug": "azul-claro"
+				},
+				{
+					"color": "#DEB745",
+					"name": "Amarelo",
+					"slug": "amarelo"
+				},
+				{
+					"color": "#001930",
+					"name": "Azul Escuro",
+					"slug": "azul-escuro"
+				},
+				{
+					"color": "#FFFFFF",
+					"name": "Branco",
+					"slug": "branco"
 				}
 			]
 		},
@@ -85,25 +107,21 @@
 				{
 					"fontFace": [
 						{
-							"fontFamily": "\"Open Sans\"",
-							"fontStyle": "italic",
-							"fontWeight": "300 800",
-							"src": [
-								"file:./assets/fonts/open-sans/open-sans-300-800-italic.ttf"
-							]
+							"fontFamily": "Poppins",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/poppins/poppins-400-normal.woff2"]
 						},
 						{
-							"fontFamily": "\"Open Sans\"",
+							"fontFamily": "Poppins",
 							"fontStyle": "normal",
-							"fontWeight": "300 800",
-							"src": [
-								"file:./assets/fonts/open-sans/open-sans-300-800-normal.ttf"
-							]
+							"fontWeight": "700",
+							"src": ["file:./assets/fonts/poppins/poppins-700-normal.woff2"]
 						}
 					],
-					"fontFamily": "\"Open Sans\", sans-serif",
-					"name": "Open Sans",
-					"slug": "open-sans"
+					"fontFamily": "Poppins, sans-serif",
+					"name": "Poppins",
+					"slug": "poppins"
 				}
 			],
 			"fontSizes": [
@@ -321,7 +339,7 @@
 			"blockGap": "var(--wp--custom--block-gap)"
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--open-sans)",
+			"fontFamily": "var(--wp--preset--font-family--poppins)",
 			"fontSize": "var(--wp--preset--font-size--paragraph)",
 			"lineHeight": "1.6"
 		}
@@ -347,7 +365,5 @@
 			"name": "post-meta",
 			"title": "Post Meta"
 		}
-	],
-	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+	]
 }
