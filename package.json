@@ -36,6 +36,9 @@
 	"dependencies": {
 		"@wordpress/icons": "^12.0.0"
 	},
+	"overrides": {
+    	"node-forge": "^1.4.0"
+  	},
 	"keywords": [],
 	"repository": {
 		"type": "git",
