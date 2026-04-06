@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "starter-block-theme/logo-carousel",
+	"version": "1.0.0",
+	"title": "Carrossel de Logos",
+	"category": "start-category",
+	"description": "Exibe um carrossel contínuo de logotipos em formato marquee.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"images": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"textdomain": "starter-block-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

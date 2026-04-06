@@ -22,4 +22,4 @@ function start_core_button_register_block_styles()
     );
 }
 
-add_action('init', 'start_core_button_register_block_styles');
+// add_action('init', 'start_core_button_register_block_styles');

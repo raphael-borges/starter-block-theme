@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "starter-block-theme/data-explorer",
+	"version": "1.0.0",
+	"title": "Explorador de Dados",
+	"category": "start-category",
+	"icon": "dashboard",
+	"attributes": {
+		"title": { "type": "string", "default": "Quais dados você gostaria de explorar?" },
+		"contactText": { "type": "string", "default": "Começar" },
+		"contactUrl": { "type": "string", "default": "#" },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "id": 1, "label": "Gestão de Risco", "imageUrl": "", "imageId": 0, "svg": "" },
+				{ "id": 2, "label": "Vendas", "imageUrl": "", "imageId": 0, "svg": "" },
+				{ "id": 3, "label": "Marketing", "imageUrl": "", "imageId": 0, "svg": "" },
+				{ "id": 4, "label": "Wi-Fi", "imageUrl": "", "imageId": 0, "svg": "" },
+				{ "id": 5, "label": "AI Data Core", "imageUrl": "", "imageId": 0, "svg": "" },
+				{ "id": 6, "label": "AI Labs convencional", "imageUrl": "", "imageId": 0, "svg": "" }
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

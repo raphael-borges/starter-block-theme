@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "starter-block-theme/inline-nav",
+	"version": "1.0.0",
+	"title": "Inline Navigation",
+	"category": "start-category",
+	"description": "A navigation menu displayed inline with customizable links.",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				{ "label": "Home", "url": "/" },
+				{ "label": "About", "url": "/about" },
+				{ "label": "Contact", "url": "/contact" }
+			]
+		}
+	},
+	"textdomain": "starter-block-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

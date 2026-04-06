@@ -1,0 +1,188 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ */
+
+.wp-block-starter-block-theme-inline-nav {
+	background: #ffff;
+	border-radius: 999px;
+	padding: 0;
+	text-align: center;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	max-width: fit-content;
+	margin: 36px auto !important;
+	display: block;
+	will-change: transform, opacity, position;
+	border: 1px solid var(--wp--preset--color--cinza-100);
+
+	ul.wp-block-starter-block-theme-inline-nav__list {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 1rem;
+
+		&.preview {
+			margin-bottom: 1.5rem;
+			padding: 0.5rem;
+			background: #f0f0f0;
+			border-radius: 4px;
+		}
+	}
+
+	li.wp-block-starter-block-theme-inline-nav__item {
+		margin: 0;
+		padding: 0;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: all 0.2s ease;
+			padding: 10px 24px;
+			border-radius: 100px;
+			display: inline-block;
+			background: transparent;
+			font-weight: 700;
+			font-size: 18px;
+			white-space: nowrap;
+
+			&:hover {
+				text-decoration: none;
+				background: rgba(0, 0, 0, 0.05);
+			}
+		}
+
+		&.active a {
+			background: linear-gradient(270deg, #33D6FF, #00CAFF, #00A3CC, #00CAFF, #33D6FF);
+			background-size: 400% 400%;
+			animation: ethereal-flow 15s ease-in-out infinite;
+			border: none;
+			box-shadow: 0 4px 15px rgba(0, 202, 255, .2);
+			transition: transform .3s ease, box-shadow .3s ease;
+			color: #fff;
+		}
+	}
+
+	// Wrapper do Select com seta customizada (injetado via JS)
+	.wp-block-starter-block-theme-inline-nav__select-wrapper {
+		display: none; // Escondido no Desktop
+		position: relative;
+		width: 100%;
+
+		&::after {
+			content: "▼";
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			color: #fff;
+			pointer-events: none;
+			font-size: 12px;
+		}
+
+		select {
+			display: block;
+			width: 100%;
+			padding: 14px 40px 14px 20px;
+			border-radius: 100px;
+			background: linear-gradient(270deg, #33D6FF, #00CAFF, #00A3CC, #00CAFF, #33D6FF);
+			background-size: 400% 400%;
+			animation: ethereal-flow 15s ease-in-out infinite;
+			border: none;
+			color: #fff;
+			font-weight: 700;
+			font-size: 16px;
+			appearance: none;
+			box-shadow: 0 4px 15px rgba(0, 202, 255, .2);
+			outline: none;
+			cursor: pointer;
+
+			option {
+				background: #fff;
+				color: #333;
+				font-weight: normal;
+			}
+		}
+	}
+
+	// ==========================================
+	// COMPORTAMENTO DESKTOP (Menu Lateral)
+	// ==========================================
+	@media (min-width: 769px) {
+		&.is-sticky {
+			position: fixed;
+			top: 50%;
+			// right removido! O JS vai calcular o "left" baseado no conteúdo
+			transform: translateY(-50%);
+			z-index: 1000;
+			background: linear-gradient(150.2deg, rgba(255, 255, 255, 0.2) 34.57%, rgba(171, 171, 171, 0.2) 97.35%), rgba(255, 255, 255, 0.6);
+			backdrop-filter: blur(5px);
+			border-radius: 30px;
+			padding: 20px 10px;
+			margin: 0;
+			box-shadow: var(--wp--preset--shadow--padrao);
+			animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			max-width: fit-content;
+			width: auto;
+
+			ul.wp-block-starter-block-theme-inline-nav__list {
+				flex-direction: column;
+				gap: 0.5rem;
+				align-items: center;
+			}
+
+			li.wp-block-starter-block-theme-inline-nav__item a {
+				padding: 10px 16px;
+				font-size: 14px;
+				text-align: center;
+			}
+		}
+	}
+
+	// ==========================================
+	// COMPORTAMENTO MOBILE (Select Topo)
+	// ==========================================
+	@media (max-width: 768px) {
+		border: none;
+		background: transparent;
+		width: 90%;
+		max-width: 300px;
+		
+		ul.wp-block-starter-block-theme-inline-nav__list {
+			display: none !important;
+		}
+
+		.wp-block-starter-block-theme-inline-nav__select-wrapper {
+			display: block;
+		}
+
+		&.is-sticky {
+			position: fixed;
+			top: 15px;
+			left: 50%;
+			right: auto;
+			transform: translateX(-50%);
+			z-index: 1000;
+			margin: 0;
+			padding: 0;
+			border-radius: 100px;
+			box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+			animation: slideDownMobile 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		}
+	}
+}
+
+@keyframes slideInRight {
+	from { transform: translate(100px, -50%); opacity: 0; }
+	to { transform: translate(0, -50%); opacity: 1; }
+}
+
+@keyframes slideDownMobile {
+	from { transform: translate(-50%, -100px); opacity: 0; }
+	to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+.wp-block-starter-block-theme-inline-nav.is-sticky + * {
+	margin-top: 0;
+}

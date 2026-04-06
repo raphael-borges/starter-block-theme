@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "starter-block-theme/video-bg-group",
+	"version": "1.0.0",
+	"title": "Video Background Group",
+	"category": "start-category",
+	"attributes": {
+		"video1080": { "type": "string" },
+		"video720": { "type": "string" },
+		"video480": { "type": "string" },
+		"videoSize": { "type": "string", "default": "1080p" }
+	},
+	"supports": {
+		"align": ["wide", "full"],
+		"jsx": true 
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,28 @@
+.wp-block-starter-block-theme-video-bg-group {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	display: flex;
+	align-items: center;
+
+	.bg-video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		width: auto;
+		height: auto;
+		transform: translate(-50%, -50%);
+		object-fit: cover;
+		z-index: 0;
+	}
+
+	.block-content {
+		position: relative;
+		z-index: 1;
+		width: 100%;
+	}
+
+    
+}

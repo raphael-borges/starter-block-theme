@@ -30,15 +30,15 @@
 	],
 	"devDependencies": {
 		"@babel/runtime": "^7.28.4",
-		"@wordpress/scripts": "^31.7.0",
+		"@wordpress/scripts": "^31.8.0",
 		"webpack-dev-server": "^5.2.2"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^12.0.0"
+		"@wordpress/icons": "^12.1.0"
 	},
 	"overrides": {
-    	"node-forge": "^1.4.0"
-  	},
+		"node-forge": "^1.4.0"
+	},
 	"keywords": [],
 	"repository": {
 		"type": "git",

@@ -1,0 +1,164 @@
+/* Zera o estilo do wrapper principal */
+.data-explorer-wrapper,
+.data-explorer-editor-wrapper {
+	display: flex;
+	align-items: center; /* Centraliza verticalmente */
+	position: relative;
+	width: 100%;
+
+	/* Lado Esquerdo: Imagem 16:9 */
+	.preview-image-side,
+	.image-display {
+		flex: 1; /* Ocupa TODO o espaço restante, deixando a imagem bem maior */
+		border-radius: 12px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			aspect-ratio: 16 / 9; /* Força a nova proporção horizontal */
+			object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+			display: block;
+			box-sizing: border-box;
+			border: 1px solid #e2e2e2;
+			border-radius: 16px;
+		}
+	}
+
+	/* Lado Direito: Base dos botões com Glassmorphism */
+	.selection-side,
+	.controls-display {
+		flex: 0 0 400px; /* Trava a largura exatamente em 400px */
+		max-width: 400px;
+		position: relative;
+		z-index: 2; /* Fica por cima da imagem */
+		margin-left: -80px; /* Sobreposição em pixels agora. Aumente/diminua se quiser mais/menos invasão */
+		padding: 30px; /* Reduzi o padding de 40px para 30px para os botões respirarem melhor */
+
+		/* Seus estilos aplicados à base */
+		background: linear-gradient(
+				150.2deg,
+				rgba(255, 255, 255, 0.2) 34.57%,
+				rgba(171, 171, 171, 0.2) 97.35%
+			),
+			rgba(255, 255, 255, 0.6);
+		border: 1px solid #e2e2e2;
+		box-shadow: 0px 4px 100px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(5px);
+		border-radius: 24px;
+
+		h2.main-title,
+		h2.explorer-title {
+			font-size: 22px; /* Levemente menor para acomodar na caixa de 400px */
+			margin-bottom: 25px;
+			color: #333; /* Ajuste conforme seu tema */
+			text-align: center;
+			color: var(--wp--preset--color--aqua-800);
+		}
+
+		.grid-buttons,
+		.items-grid {
+			display: grid;
+			grid-template-columns: repeat(
+				3,
+				1fr
+			); /* Ajustado para 2 colunas para caber na caixa de 400px */
+			gap: 15px;
+			margin-bottom: 25px;
+		}
+
+		/* Os botões internos menores */
+		.item-card {
+			background: #ffffff;
+			border: 1px solid #eee;
+			border-radius: 12px;
+			padding: 15px;
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 10px;
+			transition: all 0.3s ease;
+
+			&.is-active,
+			&:hover {
+				border-color: #00bae3;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+				transform: translateY(-2px);
+			}
+
+			.icon-wrapper svg {
+				width: 32px;
+				height: 32px;
+				max-width: 100%;
+			}
+
+			span {
+				font-size: 14px;
+				font-weight: 500;
+				color: #555;
+				color: var(--wp--preset--color--aqua-800);
+			}
+		}
+
+		/* Container do botão de contato para alinhamento */
+		.contact-action {
+			display: flex;
+			justify-content: flex-end; /* Alinha o botão à direita */
+			.wp-block-button {
+				width: 100%;
+			}
+			a {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	}
+}
+
+/* Ajustes responsivos básicos para mobile */
+@media (max-width: 768px) {
+	.data-explorer-wrapper,
+	.data-explorer-editor-wrapper {
+		flex-direction: column;
+
+		.items-grid{
+			grid-template-columns: repeat(2, 1fr)!important;
+		}
+
+		.preview-image-side,
+		.image-display {
+			flex: 1 1 auto;
+			width: 100%;
+		}
+
+		.selection-side,
+		.controls-display {
+			flex: 1 1 auto;
+			margin-left: 0;
+			margin-top: -10%; /* Sobreposição vertical no mobile */
+			width: 90%;
+			max-width: 100%; /* Quebra a trava de 400px no celular */
+		}
+	
+	}
+}
+
+/* Animação rápida de troca de imagem (Fade + Pop-up) */
+@keyframes imagePopFade {
+    0% {
+        opacity: 0.4;
+        transform: scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Classe que será injetada via JavaScript */
+.image-pop-fade {
+    animation: imagePopFade 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}

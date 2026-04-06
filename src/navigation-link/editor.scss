@@ -1,0 +1,64 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ */
+
+.wp-block-starter-block-theme-inline-nav {
+	ul.wp-block-starter-block-theme-inline-nav__list {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 1rem;
+
+		justify-content: center;
+
+		&.preview {
+			// Estilo apenas para a prévia no editor
+			margin-bottom: 1.5rem;
+			padding: 0.5rem;
+			background: #f0f0f0;
+			border-radius: 4px;
+		}
+	}
+
+	li.wp-block-starter-block-theme-inline-nav__item {
+		margin: 0;
+		padding: 0;
+
+		a {
+			text-decoration: none;
+			color: inherit;
+			transition: color 0.2s ease;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&.active a {
+			font-weight: bold;
+			color: #21759b; // cor primária do tema
+			text-decoration: underline;
+		}
+	}
+
+	&.is-sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		background-color: #fff;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		padding: 0.5rem 1rem;
+		margin: 0;
+		transition: all 0.2s ease;
+
+		// Para não quebrar o layout, adicione um espaçamento equivalente no próximo elemento
+		& + * {
+			margin-top: 60px; // ajuste conforme a altura do menu fixo
+		}
+	}
+}
