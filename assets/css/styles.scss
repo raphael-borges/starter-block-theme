@@ -1,56 +1,165 @@
-.js .is-style-anima-right,
-.js .is-style-anima-down {
-    opacity: 0;
+// @use "modal.scss";
+// @use "wp-forms.scss";
+
+html,
+body {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width: 100vw;
+	box-sizing: border-box;
+	/* Suavização de Fontes (Opcional, focado em Apple/Mac) */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	* {
+		box-sizing: border-box;
+	}
 }
 
-.is-style-anima-right.ativo,
-.is-style-anima-down.ativo {
-    display: block !important;
-    opacity: 1;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+	svg,
+	img {
+		vertical-align: middle;
+		margin: 0 2px;
+	}
 }
 
-.is-style-anima-right.ativo {
-    animation: show-right .5s forwards;
+.wp-block-read-more,
+.wp-block-button__link {
+	transition: all 0.3s ease;
+
+	&:hover,
+	&:active {
+		opacity: 0.8;
+	}
+
+	&:focus {
+		opacity: 0.4;
+	}
+	margin: 0 2px;
 }
 
-.is-style-anima-down.ativo {
-    animation: show-down .5s forwards;
+#header-main {
+	.current-menu-item {
+		.wp-block-pages-list__item__link {
+			opacity: 0.4;
+		}
+	}
+
+	.wp-block-pages-list__item__link {
+		&:hover,
+		&:active {
+			opacity: 0.8;
+		}
+
+		&:focus {
+			opacity: 0.4;
+		}
+	}
 }
 
-@keyframes show-right {
-    from {
-        opacity: 0;
-        transform: translate3d(-30px, 0, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
+footer {
+	margin-block-start: 0;
 }
 
-@keyframes show-down {
-    from {
-        opacity: 0;
-        transform: translate3d(0, -30px, 0);
-    }
+.wp-block-query-pagination {
+	margin: 48px 0;
+	// Estiliza tanto os números quanto o botão "Página anterior"
+	a.page-numbers,
+	a.wp-block-query-pagination-previous,
+	a.wp-block-query-pagination-next,
+	span.page-numbers {
+		display: inline-block;
+		text-decoration: none;
+		background: transparent;
+		border: 1px solid var(--wp--preset--color--aqua-500-padrao);
+		color: var(--wp--preset--color--aqua-500-padrao);
+		padding: 0.67em 1.33em;
+		box-shadow: none;
+		transition: all 0.3s ease-out;
+		text-shadow: none !important;
+		cursor: pointer;
+		border-radius: 8px;
 
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
+		// Estilo para a página atual (span)
+		&.current {
+			background-color: var(--wp--preset--color--cinza-50) !important;
+			color: var(--wp--preset--color--cinza-300) !important;
+			border-color: var(--wp--preset--color--cinza-400) !important;
+			cursor: not-allowed;
+		}
+
+		&:hover {
+			background-color: var(--wp--preset--color--aqua-50) !important;
+			color: var(--wp--preset--color--aqua-700) !important;
+			border-color: var(--wp--preset--color--aqua-700) !important;
+			box-shadow: var(--wp--preset--shadow--padrao) !important;
+		}
+
+		&:active {
+			background-color: var(--wp--preset--color--aqua-200) !important;
+			transform: translateY(1px);
+			box-shadow: none !important;
+		}
+
+		&:disabled,
+		&.is-disabled {
+			background-color: var(--wp--preset--color--cinza-50) !important;
+			color: var(--wp--preset--color--cinza-300) !important;
+			border-color: var(--wp--preset--color--cinza-400) !important;
+			cursor: not-allowed;
+		}
+	}
+
+	// Ajuste de espaçamento entre os itens
+	.wp-block-query-pagination-numbers {
+		display: flex;
+		gap: 10px;
+		margin: 0 10px;
+	}
 }
 
-.is-style-fill {
-    .wp-block-button__link {
+// PLUGINS
+.safe-svg-cover svg {
+	fill: none;
+}
 
-        &:hover,
-        &:active {
-            background-color: #efefef !important;
-        }
+// UTILITIES
+// Variável de breakpoint (ajuste conforme o grid do seu tema)
+$breakpoint-mobile: 768px;
 
-        &:focus {
-            background-color: var(--wp--preset--color--new-cinza-light) !important;
-        }
-    }
+// Oculta elementos em telas pequenas (Celulares e Tablets em pé)
+.hidden-mobile {
+	@media (max-width: #{$breakpoint-mobile}) {
+		display: none !important;
+	}
+}
+
+// Oculta elementos em telas grandes (Computadores e Laptops)
+.hidden-desktop {
+	@media (min-width: #{$breakpoint-mobile + 1px}) {
+		display: none !important;
+	}
+}
+
+// NAV MOBILE
+
+@media screen and (max-width: 767px) {
+	.wp-block-navigation-link,
+	.wp-block-navigation-item__label {
+		font-size: 20px;
+	}
+	.wp-block-navigation__submenu-container {
+		padding: 8px !important;
+		margin: 0 !important;
+		a {
+			color: #888 !important;
+		}
+	}
 }

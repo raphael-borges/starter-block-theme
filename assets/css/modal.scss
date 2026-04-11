@@ -1,0 +1,83 @@
+// ****************************************** MODAL ******************************************
+
+/* Overlay - Fundo escuro */
+#custom-wa-overlay {
+	display: none; /* Escondido por padrão */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	background-color: rgba(0, 25, 48, 0.9); /* #001930 com 80% de opacidade */
+	z-index: 999999;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(4px); /* Opcional: um leve desfoque no fundo */
+
+	flex-direction: column;
+	gap: 22px;
+}
+
+#custom-wa-modal {
+	background: #ffffff;
+	border-color: #dddddd;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 32px;
+
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: var(--wp--preset--spacing--32);
+	padding-left: 0;
+	box-shadow: var(--wp--preset--shadow--start-default);
+
+	position: relative;
+	width: 90%;
+	max-width: 100vw;
+	animation: modalFadeIn 0.3s ease-out;
+}
+
+/* Botão de fechar básico */
+#close-wa-modal {
+	position: absolute;
+	top: -15px;
+	right: -20px;
+	background: none;
+	border: none;
+	font-size: 30px;
+	cursor: pointer;
+	color: #fff;
+	width: 62px;
+	height: 62px;
+	border-radius: 99px;
+	font-weight: bold;
+	background-color: var(--wp--preset--color--margenta);
+	&:hover,
+	&:active {
+		transform: scale(1.02);
+		text-decoration: none;
+		opacity: 0.9;
+	}
+}
+
+.modal-content {
+	padding: 40px 20px;
+	overflow: visible;
+	h3 {
+		color: var(--wp--preset--color--azul);
+		text-align: center;
+	}
+}
+
+@keyframes modalFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+// ****************************************** FIM MODAL ******************************************

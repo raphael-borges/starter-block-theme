@@ -1,0 +1,64 @@
+// ****************************************** WP FORM ******************************************
+.wpforms-field-row,
+.wpforms-container input.wpforms-field-medium {
+	width: 100%;
+	max-width: 100% !important;
+}
+label,
+.wpforms-container .wpforms-field-label {
+	color: #5e5e5d !important;
+	font-weight: 400 !important;
+}
+
+.wpforms-container .wpforms-field,
+.wp-core-ui div.wpforms-container .wpforms-field {
+	padding: 8px 0 !important;
+	position: relative;
+}
+.wpforms-submit {
+	font-weight: 700 !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	border-radius: 30px !important;
+	background-color: var(--wp--preset--color--margenta) !important;
+}
+div.wpforms-container-full input[type="date"],
+div.wpforms-container-full input[type="datetime"],
+div.wpforms-container-full input[type="datetime-local"],
+div.wpforms-container-full input[type="email"],
+div.wpforms-container-full input[type="month"],
+div.wpforms-container-full input[type="number"],
+div.wpforms-container-full input[type="password"],
+div.wpforms-container-full input[type="range"],
+div.wpforms-container-full input[type="search"],
+div.wpforms-container-full input[type="tel"],
+div.wpforms-container-full input[type="text"],
+div.wpforms-container-full input[type="time"],
+div.wpforms-container-full input[type="url"],
+div.wpforms-container-full input[type="week"],
+div.wpforms-container-full select,
+div.wpforms-container-full textarea,
+.wp-core-ui div.wpforms-container-full input[type="date"],
+.wp-core-ui div.wpforms-container-full input[type="datetime"],
+.wp-core-ui div.wpforms-container-full input[type="datetime-local"],
+.wp-core-ui div.wpforms-container-full input[type="email"],
+.wp-core-ui div.wpforms-container-full input[type="month"],
+.wp-core-ui div.wpforms-container-full input[type="number"],
+.wp-core-ui div.wpforms-container-full input[type="password"],
+.wp-core-ui div.wpforms-container-full input[type="range"],
+.wp-core-ui div.wpforms-container-full input[type="search"],
+.wp-core-ui div.wpforms-container-full input[type="tel"],
+.wp-core-ui div.wpforms-container-full input[type="text"],
+.wp-core-ui div.wpforms-container-full input[type="time"],
+.wp-core-ui div.wpforms-container-full input[type="url"],
+.wp-core-ui div.wpforms-container-full input[type="week"],
+.wp-core-ui div.wpforms-container-full select,
+.wp-core-ui div.wpforms-container-full textarea {
+	/* Rectangle 15 */
+
+	box-sizing: border-box;
+
+	background: #f7f7f7;
+	border: 1px solid #d1d1d1;
+	border-radius: 5px;
+}

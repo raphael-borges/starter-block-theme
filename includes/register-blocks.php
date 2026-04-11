@@ -3,11 +3,7 @@
 function start_block_init()
 {
 	$blocks = [
-		['name' => 'slider'],
-		['name' => 'nav-theme']
-		// ['name' => 'search-form', 'options' => [
-		// 	'render_callback' => 'up_search_form_render_cb'
-		// ]]
+		// ['name' => 'slider']
 
 	];
 	foreach ($blocks as $block) {
