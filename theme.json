@@ -12,34 +12,39 @@
 			"duotone": [],
 			"palette": [
 				{
-					"color": "#111111",
-					"name": "Preto",
-					"slug": "preto"
+					"color": "#f8f9fc",
+					"name": "Fundo Nevoeiro",
+					"slug": "base"
 				},
 				{
-					"color": "#52A6E5",
-					"name": "Azul",
-					"slug": "azul"
+					"color": "#1a1a36",
+					"name": "Azul Noturno",
+					"slug": "contrast"
 				},
 				{
-					"color": "#81C9FF",
-					"name": "Azul Claro",
-					"slug": "azul-claro"
+					"color": "#ee7203",
+					"name": "Laranja Alerta",
+					"slug": "vivid-orange"
 				},
 				{
-					"color": "#DEB745",
-					"name": "Amarelo",
-					"slug": "amarelo"
+					"color": "#965CA2",
+					"name": "Roxo Ametista",
+					"slug": "vivid-purple"
 				},
 				{
-					"color": "#001930",
-					"name": "Azul Escuro",
-					"slug": "azul-escuro"
+					"color": "#f59c00",
+					"name": "Amarelo Âmbar",
+					"slug": "vivid-amber"
 				},
 				{
-					"color": "#FFFFFF",
-					"name": "Branco",
-					"slug": "branco"
+					"color": "#e40134",
+					"name": "Vermelho Energia",
+					"slug": "vivid-red"
+				},
+				{
+					"color": "#ffffff",
+					"name": "Branco Puro",
+					"slug": "white"
 				}
 			]
 		},
