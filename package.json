@@ -42,7 +42,8 @@
 		"serialize-javascript": ">=7.0.5",
 		"minimatch": ">=9.0.7",
 		"@wordpress/scripts": "^31.8.0",
-		"webpack-dev-server": "^5.2.3"
+		"webpack-dev-server": "^5.2.3",
+		"axios": "^1.16.0"
 	},
 	"keywords": [],
 	"repository": {
