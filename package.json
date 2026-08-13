@@ -30,7 +30,7 @@
 	],
 	"devDependencies": {
 		"@babel/runtime": "^7.28.4",
-		"@wordpress/scripts": "^34.0.0"
+		"@wordpress/scripts": "^34.1.0"
 	},
 	"dependencies": {
 		"@wordpress/icons": "^15.3.0"
@@ -47,7 +47,6 @@
 		    "sockjs": "^0.3.24",
     "uuid": "^9.0.1",
 		"webpack-dev-server": "^6.0.0"
-
 	},
 	"keywords": [],
 	"repository": {
