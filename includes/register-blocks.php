@@ -3,7 +3,8 @@
 function start_block_init()
 {
 	$blocks = [
-		// ['name' => 'slider']
+		['name' => 'video-background'],
+		['name' => 'dual-vertical-slider']
 
 	];
 	foreach ($blocks as $block) {

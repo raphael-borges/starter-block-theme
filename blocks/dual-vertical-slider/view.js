@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".wp-block-starter-block-theme-dual-vertical-slider .vertical-slider").forEach(e=>{const t=e.querySelectorAll(".slide");if(t.length<=1)return;const l=parseInt(e.dataset.interval,10)||5500;let r=0;setInterval(()=>{t[r].classList.remove("active"),r=(r+1)%t.length,t[r].classList.add("active")},l)})});
