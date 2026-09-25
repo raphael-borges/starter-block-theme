@@ -1,1 +1,14 @@
-.wp-block-starter-block-theme-dual-vertical-slider .slider-placeholder{align-items:center;background:#eee;color:#666;display:flex;font-size:14px;height:100%;justify-content:center;padding:10px;text-align:center}
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/dual-vertical-slider/editor.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-starter-block-theme-dual-vertical-slider .slider-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #eee;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px;
+}

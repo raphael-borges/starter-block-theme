@@ -1,1 +1,72 @@
-.wp-block-starter-block-theme-dual-vertical-slider{box-sizing:border-box}.wp-block-starter-block-theme-dual-vertical-slider .slider-wrapper{margin:0 auto;max-width:600px;padding:24px;width:100%}.wp-block-starter-block-theme-dual-vertical-slider .dual-slider-grid{align-items:center;display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}.wp-block-starter-block-theme-dual-vertical-slider .vertical-slider{aspect-ratio:3/4;border-radius:4px;box-shadow:0 10px 30px rgba(0,0,0,.08);overflow:hidden;position:relative;width:100%}.wp-block-starter-block-theme-dual-vertical-slider .vertical-slider.slider-offset{margin-top:40px}.wp-block-starter-block-theme-dual-vertical-slider .slider-track{height:100%;position:relative;width:100%}.wp-block-starter-block-theme-dual-vertical-slider .slide{height:100%;inset:0;object-fit:cover;opacity:0;position:absolute;transition:opacity 1.5s cubic-bezier(.4,0,.2,1);width:100%}.wp-block-starter-block-theme-dual-vertical-slider .slide.active{opacity:1}
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/dual-vertical-slider/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-starter-block-theme-dual-vertical-slider {
+  box-sizing: border-box;
+}
+.wp-block-starter-block-theme-dual-vertical-slider .slider-wrapper {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.wp-block-starter-block-theme-dual-vertical-slider .dual-slider-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+.wp-block-starter-block-theme-dual-vertical-slider .vertical-slider {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+.wp-block-starter-block-theme-dual-vertical-slider .vertical-slider.slider-offset {
+  margin-top: 40px;
+}
+.wp-block-starter-block-theme-dual-vertical-slider .slider-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.wp-block-starter-block-theme-dual-vertical-slider {
+  /* O container do slide (<picture> ou <img>) */
+}
+.wp-block-starter-block-theme-dual-vertical-slider .slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.5s step-after;
+  /* Garante que o container (<picture>) e a <img> ocupem 100% da área */
+}
+.wp-block-starter-block-theme-dual-vertical-slider .slide,
+.wp-block-starter-block-theme-dual-vertical-slider .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wp-block-starter-block-theme-dual-vertical-slider .slide img {
+  display: block;
+}
+.wp-block-starter-block-theme-dual-vertical-slider .slide.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
+}
+.wp-block-starter-block-theme-dual-vertical-slider .slide.active img {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0s;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

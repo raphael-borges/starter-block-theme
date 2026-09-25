@@ -153,7 +153,7 @@ $breakpoint-mobile: 768px;
 @media screen and (max-width: 767px) {
 	.wp-block-navigation-link,
 	.wp-block-navigation-item__label {
-		font-size: 20px;
+		font-size: 16px;
 	}
 	.wp-block-navigation__submenu-container {
 		padding: 8px !important;
@@ -179,9 +179,8 @@ hr {
 	transition: all 0.3s ease;
 
 	summary {
-		font-family: "Atelia", "Times New Roman", serif;
+		font-family: sans-serif;
 		font-size: 1.25rem;
-		font-weight: 600;
 		letter-spacing: -0.01em;
 		color: var(--foreground, #594841);
 		padding: 1.5rem 1rem 1.5rem 0;

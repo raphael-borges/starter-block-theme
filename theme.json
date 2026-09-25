@@ -104,12 +104,11 @@
 							"fontFamily": "Atelia",
 							"fontStyle": "normal",
 							"fontWeight": "400",
-							"src": [
-								"file:./assets/fonts/atelia/atelia-400-normal.woff2"
-							]
+							"src": ["file:./assets/fonts/atelia/atelia-400-normal.woff2"],
+							"fontDisplay": "swap"
 						}
 					],
-					"fontFamily": "Atelia",
+					"fontFamily": "Atelia, sans-serif",
 					"name": "Atelia",
 					"slug": "atelia"
 				},

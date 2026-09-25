@@ -1,1 +1,101 @@
-.wp-block-starter-block-theme-logo-carousel{background:transparent;padding:40px 0;width:100%}.logo-carousel-container{overflow:hidden;position:relative;white-space:nowrap;width:100%}.logo-carousel-container:after,.logo-carousel-container:before{content:"";height:100%;pointer-events:none;position:absolute;top:0;width:100px;z-index:2}.logo-carousel-container:before{background:linear-gradient(90deg,#fff 0,hsla(0,0%,100%,0));left:0}.logo-carousel-container:after{background:linear-gradient(270deg,#fff 0,hsla(0,0%,100%,0));right:0}.logo-carousel-track{align-items:center;animation:scrollLogos 80s linear infinite;display:inline-flex;padding:15px 0}.logo-carousel-track:hover{animation-play-state:paused}.logo-slide{align-items:center;display:flex;flex:0 0 auto;justify-content:center;margin:0 40px;overflow:visible}.logo-slide img{filter:grayscale(100%) opacity(.5);height:60px;object-fit:contain;transition:filter .3s ease,transform .3s cubic-bezier(.25,.46,.45,.94);width:140px}.logo-slide img:hover{filter:grayscale(0) opacity(1);transform:scale(1.08)}@keyframes scrollLogos{0%{transform:translateX(0)}to{transform:translateX(-50%)}}@media(max-width:768px){.logo-carousel-container:after,.logo-carousel-container:before{width:30px}.logo-carousel-track{animation:scrollLogos 90s linear infinite}.logo-slide{margin:0 25px}.logo-slide img{height:50px;width:120px}}
+/*!*****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/logo-carousel/style.scss ***!
+  \*****************************************************************************************************************************************************************************************************************************************************/
+/* Wrapper do bloco no site */
+.wp-block-starter-block-theme-logo-carousel {
+  width: 100%;
+  padding: 40px 0;
+  background: transparent;
+}
+
+.logo-carousel-container {
+  width: 100%;
+  overflow: hidden; /* Esconde os logos que estão fora da tela horizontalmente */
+  white-space: nowrap;
+  position: relative;
+  /* Gradientes nas bordas para efeito de fade in/out suave */
+}
+.logo-carousel-container::before, .logo-carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.logo-carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.logo-carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.logo-carousel-track {
+  display: inline-flex;
+  align-items: center;
+  /* Aumentado de 50s para 80s para deixar bem mais lento */
+  animation: scrollLogos 80s linear infinite;
+  /* Respiro vertical para garantir que a imagem não corte no topo/base ao expandir */
+  padding: 15px 0;
+  /* Pausa a animação ao passar o mouse */
+}
+.logo-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.logo-slide {
+  flex: 0 0 auto;
+  margin: 0 40px; /* Espaço entre os logos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible; /* Garante que o efeito de hover possa vazar o limite da caixa */
+}
+.logo-slide img {
+  /* Novas dimensões solicitadas (repare que removi o max-width/height para evitar o corte) */
+  width: 140px;
+  height: 60px;
+  /* O 'contain' mantém a proporção original da logo sem achatar */
+  object-fit: contain;
+  /* Efeito tons de cinza */
+  filter: grayscale(100%) opacity(0.5);
+  /* Deixei a transição um pouco mais suave para o hover */
+  transition: filter 0.3s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.logo-slide img:hover {
+  filter: grayscale(0%) opacity(1); /* Volta a cor original no hover */
+  transform: scale(1.08); /* Pequeno destaque no hover */
+}
+
+/* O segredo do loop infinito: Movemos exatamente 50% */
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+  .logo-carousel-container::before,
+  .logo-carousel-container::after {
+    width: 30px;
+  }
+  .logo-carousel-track {
+    /* No mobile costuma parecer mais rápido por causa da tela menor, então aumentei aqui também */
+    animation: scrollLogos 90s linear infinite;
+  }
+  .logo-slide {
+    margin: 0 25px;
+  }
+  .logo-slide img {
+    width: 120px;
+    height: 50px;
+  }
+}
+
+/*# sourceMappingURL=style-index.css.map*/

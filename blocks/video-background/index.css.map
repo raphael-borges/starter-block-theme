@@ -1,0 +1,1 @@
+{"version":3,"file":"video-background/index.css","mappings":";;;AACA;EACC;EACG;AAAJ,C","sources":["webpack://starter-block-theme/./src/video-background/editor.scss"],"sourcesContent":["// Estilos exclusivos para o painel de edição\n.wp-block-starter-block-theme-video-bg-group {\n\tborder: 1px dashed #ccc;\n    background: #f9f9f9;\n}"],"names":[],"sourceRoot":""}

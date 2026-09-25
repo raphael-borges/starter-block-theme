@@ -1,1 +1,32 @@
-document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".wp-block-starter-block-theme-dual-vertical-slider .vertical-slider").forEach(e=>{const t=e.querySelectorAll(".slide");if(t.length<=1)return;const l=parseInt(e.dataset.interval,10)||5500;let r=0;setInterval(()=>{t[r].classList.remove("active"),r=(r+1)%t.length,t[r].classList.add("active")},l)})});
+/******/ (() => { // webpackBootstrap
+/*!******************************************!*\
+  !*** ./src/dual-vertical-slider/view.js ***!
+  \******************************************/
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".wp-block-starter-block-theme-dual-vertical-slider .vertical-slider");
+  sliders.forEach(slider => {
+    const track = slider.querySelector(".slider-track") || slider;
+    const slides = Array.from(track.children).filter(child => child.classList.contains("slide"));
+    if (slides.length <= 1) return;
+
+    // Força a decodificação imediata da imagem escolhida pelo <picture>
+    slides.forEach(slide => {
+      const img = slide.tagName === "IMG" ? slide : slide.querySelector("img");
+      if (img) {
+        img.loading = "eager";
+        img.decoding = "sync";
+      }
+    });
+    const intervalMs = parseInt(slider.dataset.interval, 10) || 5500;
+    let currentIndex = slides.findIndex(slide => slide.classList.contains("active"));
+    if (currentIndex === -1) currentIndex = 0;
+    setInterval(() => {
+      slides[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add("active");
+    }, intervalMs);
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=view.js.map
