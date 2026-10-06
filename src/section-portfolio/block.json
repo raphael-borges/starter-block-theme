@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "starter-block-theme/section-portfolio",
+	"version": "1.0.0",
+	"title": "Sessão — Portfólio",
+	"category": "start-category",
+	"icon": "portfolio",
+	"description": "Sessão 04 — Portfólio.",
+	"keywords": ["portfólio", "portfolio", "trabalhos", "sessão"],
+	"textdomain": "starter-block-theme",
+	"parent": ["starter-block-theme/spatial-canvas"],
+	"supports": {
+		"interactivity": true,
+		"html": false,
+		"multiple": false,
+		"reusable": false,
+		"anchor": true
+	},
+	"attributes": {
+		"sectionTitle":  { "type": "string", "default": "Portfólio" },
+		"sectionNumber": { "type": "string", "default": "04" },
+		"slideCount":    { "type": "number", "default": 6 }
+	},
+	"render": "file:./render.php",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

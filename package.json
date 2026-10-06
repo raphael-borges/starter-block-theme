@@ -1,60 +1,29 @@
 {
 	"name": "starter-block-theme",
-	"version": "0.1.0",
-	"description": "Example block scaffolded with Create Block tool.",
-	"author": "The WordPress Contributors",
+	"version": "1.0.0",
+	"description": "Starter Block Theme com Interactivity API.",
+	"author": "Raphael Borges",
 	"license": "GPL-2.0-or-later",
-	"main": "build/index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/raphael-borges/starter-block-theme.git"
+	},
 	"scripts": {
-		"build": "wp-scripts build --webpack-src-dir=src --output-path=blocks ",
+		"start": "wp-scripts start --webpack-src-dir=src --output-path=blocks",
+		"build": "wp-scripts build --webpack-src-dir=src --output-path=blocks",
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start --webpack-src-dir=src --output-path=blocks",
+
 		"compile-assets": "webpack --config webpack/webpack.config.main.js --watch"
 	},
-	"files": [
-		"assets",
-		"blocks",
-		"includes",
-		"parts",
-		"patterns",
-		"styles",
-		"templates",
-		"functions.php",
-		"style.css",
-		"screenshot.png",
-		"theme.json"
-	],
-	"devDependencies": {
-		"@babel/runtime": "^7.28.4",
-		"@wordpress/scripts": "^34.1.0"
-	},
 	"dependencies": {
-		"@wordpress/icons": "^15.3.0"
+		"@wordpress/icons": "^15.3.0",
+		"@wordpress/interactivity": "^6.0.0"
 	},
-	"overrides": {
-		"node-forge": "^1.4.0",
-		"basic-ftp": "^5.2.2",
-		"serialize-javascript": ">=7.0.5",
-		"minimatch": ">=9.0.7",
-		"websocket-driver": ">=0.7.5",
-		"axios": ">=1.18.0",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
-		    "sockjs": "^0.3.24",
-    "uuid": "^9.0.1",
-		"webpack-dev-server": "^6.0.0"
-	},
-	"keywords": [],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/raphael-borges/starter-block-theme.git"
-	},
-	"bugs": {
-		"url": "https://github.com/raphael-borges/starter-block-theme/issues"
-	},
-	"homepage": "https://github.com/raphael-borges/starter-block-theme#readme"
+	"devDependencies": {
+		"@wordpress/scripts": "^36.0.0"
+	}
 }

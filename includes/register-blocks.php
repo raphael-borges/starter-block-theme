@@ -3,7 +3,12 @@
 function start_block_init()
 {
 	$blocks = [
-		// ['name' => 'slider']
+		['name' => 'spatial-canvas'],
+		['name' => 'section-hero'],
+		['name' => 'section-services'],
+		['name' => 'section-trajectory'],
+		['name' => 'section-portfolio'],
+		['name' => 'section-contact']
 
 	];
 	foreach ($blocks as $block) {

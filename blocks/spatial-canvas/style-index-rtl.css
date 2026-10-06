@@ -1,0 +1,167 @@
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/spatial-canvas/style.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/* ============================================================
+ * CANVAS ESPACIAL 2D
+ *
+ * Dois estados:
+ *   1. SEM JS  → sessões empilhadas, scroll vertical natural
+ *   2. COM JS  → container alto + stage pinado, transição controlada pelo scroll
+ * ============================================================ */
+/* ============================================================
+ * ESTADO BASE — funciona sem JS (sessões empilhadas)
+ * ============================================================ */
+.sbt-spatial-canvas {
+  position: relative;
+  width: 100%;
+  background: var(--wp--preset--color--base, #0a0a0a);
+  color: var(--wp--preset--color--contrast, #f5f5f7);
+}
+.sbt-spatial-canvas__stage {
+  position: relative;
+  width: 100%;
+}
+.sbt-spatial-canvas__track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.sbt-spatial-canvas__track > * {
+  position: relative;
+  width: 100%;
+  min-height: 60vh;
+}
+.sbt-spatial-canvas__hud {
+  display: none;
+}
+
+/* ============================================================
+ * ESTADO COM JS — scroll-driven com JS pinning
+ * ============================================================ */
+.sbt-spatial-canvas--js-ready {
+  --sbt-sections: 5; /* sobrescrito por JS */
+  position: relative;
+  width: 100vw;
+  height: calc(100vh * var(--sbt-sections));
+  overflow: visible;
+  isolation: isolate;
+  background: var(--wp--preset--color--base, #0a0a0a);
+  color: var(--wp--preset--color--contrast, #f5f5f7);
+}
+@supports (height: 100dvh) {
+  .sbt-spatial-canvas--js-ready {
+    height: calc(100dvh * var(--sbt-sections));
+  }
+}
+.sbt-spatial-canvas--js-ready {
+  /* O stage é reposicionado pelo JS:
+     - absolute no topo → antes do canvas entrar
+     - fixed top:0      → enquanto o canvas está "ativo"
+     - absolute no fim  → depois do canvas sair da tela
+     Os valores iniciais aqui servem só para o primeiro render.
+  */
+}
+.sbt-spatial-canvas--js-ready .sbt-spatial-canvas__stage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: inherit;
+  will-change: transform;
+}
+@supports (height: 100dvh) {
+  .sbt-spatial-canvas--js-ready .sbt-spatial-canvas__stage {
+    height: 100dvh;
+  }
+}
+.sbt-spatial-canvas--js-ready .sbt-spatial-canvas__track {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* ↓ NOVO — dá profundidade ao rotateX */
+  perspective: 1400px;
+  perspective-origin: center center;
+  transform-style: preserve-3d;
+}
+.sbt-spatial-canvas--js-ready {
+  /* Cada sessão é uma camada absoluta — o JS controla transform/opacity */
+}
+.sbt-spatial-canvas--js-ready .sbt-spatial-canvas__track > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center center;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+.sbt-spatial-canvas--js-ready {
+  /* ---------- HUD ---------- */
+}
+.sbt-spatial-canvas--js-ready .sbt-spatial-canvas__hud {
+  display: grid;
+  position: fixed;
+  right: 50%;
+  bottom: 24px;
+  transform: translateX(50%);
+  grid-template-columns: minmax(150px, 1fr) auto minmax(150px, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 22px 16px;
+  width: min(1100px, 100vw - 48px);
+  border-radius: 22px;
+  background: rgba(15, 15, 18, 0.55);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  z-index: 50;
+}
+@media (max-width: 720px) {
+  .sbt-spatial-canvas--js-ready .sbt-spatial-canvas__hud {
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    bottom: 16px;
+    padding: 10px 14px 14px;
+  }
+}
+.sbt-spatial-canvas--js-ready {
+  /* HUD contextual — esconder seções específicas */
+}
+.sbt-spatial-canvas--js-ready .sbt-spatial-canvas__hud-slide[hidden],
+.sbt-spatial-canvas--js-ready .sbt-spatial-canvas__cta[hidden] {
+  display: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sbt-spatial-canvas--js-ready .sbt-spatial-canvas__track > * {
+    transition-duration: 0ms;
+  }
+}
+
+/* ============================================================
+ * NEUTRALIZADORES — evitam que ancestrais quebrem o pinning
+ * ============================================================ */
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.entry-content,
+.wp-block-post-content,
+.wp-site-blocks,
+main,
+article {
+  overflow: visible !important;
+  max-height: none !important;
+  transform: none !important;
+  filter: none !important;
+  perspective: none !important;
+  contain: none !important;
+}

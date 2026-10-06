@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "starter-block-theme/spatial-canvas",
+	"version": "1.0.0",
+	"title": "Canvas Espacial 2D",
+	"category": "start-category",
+	"icon": "screenoptions",
+	"description": "Container orquestrador fullscreen da home.",
+	"keywords": ["canvas", "spatial", "fullscreen", "portfolio"],
+	"textdomain": "starter-block-theme",
+	"supports": {
+		"interactivity": false,
+		"html": false,
+		"align": ["full"],
+		"anchor": true,
+		"multiple": false,
+		"reusable": false
+	},
+	"attributes": {
+		"totalSections": { "type": "number", "default": 5 },
+		"autoAdvanceMs": { "type": "number", "default": 8000 },
+		"ctaLabel": { "type": "string", "default": "Ver trabalho" },
+		"ctaUrl": { "type": "string", "default": "#" }
+	},
+	"render": "file:./render.php",
+	"viewScript": "file:./view.js",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
