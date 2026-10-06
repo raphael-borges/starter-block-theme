@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "starter-block-theme/dual-vertical-slider",
+	"version": "1.0.0",
+	"title": "Dual Vertical Slider",
+	"category": "start-category",
+	"description": "Exibe dois sliders verticais lado a lado com desfasamento e transição suave de imagens.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"images": {
+			"type": "array",
+			"default": []
+		}
+	},
+	"textdomain": "starter-block-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

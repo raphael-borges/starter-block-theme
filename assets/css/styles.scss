@@ -1,5 +1,5 @@
 // @use "modal.scss";
-// @use "wp-forms.scss";
+@use "wp-forms.scss";
 
 html,
 body {
@@ -153,13 +153,106 @@ $breakpoint-mobile: 768px;
 @media screen and (max-width: 767px) {
 	.wp-block-navigation-link,
 	.wp-block-navigation-item__label {
-		font-size: 20px;
+		font-size: 16px;
 	}
 	.wp-block-navigation__submenu-container {
 		padding: 8px !important;
 		margin: 0 !important;
 		a {
 			color: #888 !important;
+		}
+	}
+}
+
+hr {
+	border-top: 1px solid !important;
+}
+
+/* ==========================================================================
+   WordPress Details / Summary — Porto Covo Art Style
+   ========================================================================== */
+
+.wp-block-details {
+	border-bottom: 1px solid var(--border, rgba(89, 72, 65, 0.15));
+	margin: 1.5rem 0;
+	padding: 0;
+	transition: all 0.3s ease;
+
+	summary {
+		font-family: sans-serif;
+		font-size: 1.25rem;
+		letter-spacing: -0.01em;
+		color: var(--foreground, #594841);
+		padding: 1.5rem 1rem 1.5rem 0;
+		cursor: pointer;
+		list-style: none;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		/* Remove o marcador nativo do navegador */
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		/* Ícone minimalista de expansão (+) / (-) */
+		&::after {
+			content: "+";
+			font-family: sans-serif;
+			font-weight: 300;
+			font-size: 1.5rem;
+			line-height: 1;
+			transition: transform 0.3s ease;
+			color: inherit;
+		}
+	}
+
+	/* Estado aberto */
+	&[open] {
+		summary {
+			&::after {
+				content: "−";
+			}
+		}
+	}
+
+	/* Conteúdo interno (parágrafos) */
+	p.wp-block-paragraph {
+		font-family:
+			ui-sans-serif,
+			system-ui,
+			-apple-system,
+			sans-serif;
+		font-weight: 300;
+		font-size: 1.05rem;
+		line-height: 1.65;
+		color: var(--foreground, #594841);
+		padding: 0 0 1.5rem 0;
+		margin: 0 0 1rem 0;
+		opacity: 0.85;
+
+		&:last-child {
+			margin-bottom: 0;
+			padding-bottom: 1.5rem;
+		}
+	}
+}
+
+@media (hover: hover) {
+	.wp-block-navigation
+		.has-child:not(.open-on-click):hover
+		> .wp-block-navigation__submenu-container {
+		min-width: auto !important;
+		background-color: transparent;
+		border: none;
+
+		a {
+			padding: 0.2rem 1rem;
+		}
+		li:hover {
+			background-color: transparent;
+			opacity: 0.6;
 		}
 	}
 }

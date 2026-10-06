@@ -11,6 +11,7 @@
 			"duotone": [],
 			"palette": [
 				{
+<<<<<<< HEAD
 					"color": "#fffbea",
 					"name": "Orange Peel 50",
 					"slug": "orange-peel-50"
@@ -104,6 +105,31 @@
 					"color": "#e40134",
 					"name": "Alizarin Crimson 700",
 					"slug": "alizarin-crimson-700"
+=======
+					"color": "oklch(0.985 0.005 80)",
+					"name": "Fundo Areia (Cream)",
+					"slug": "base"
+				},
+				{
+					"color": "oklch(0.36 0.018 45)",
+					"name": "Terra",
+					"slug": "contrast"
+				},
+				{
+					"color": "oklch(0.78 0.025 75)",
+					"name": "Areia Escura",
+					"slug": "secondary"
+				},
+				{
+					"color": "oklch(0.66 0.11 190)",
+					"name": "Verde Água",
+					"slug": "accent"
+				},
+				{
+					"color": "oklch(0.93 0.012 75)",
+					"name": "Areia Clara (Muted)",
+					"slug": "muted"
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 				},
 				{
 					"color": "#ad042f",
@@ -183,13 +209,7 @@
 			"wideSize": "100%"
 		},
 		"shadow": {
-			"presets": [
-				{
-					"name": "Padrão",
-					"shadow": "2px 2px 10px 0px rgba(0, 0, 0, 0.20)",
-					"slug": "start-default"
-				}
-			]
+			"presets": []
 		},
 		"spacing": {
 			"customSpacingSize": true,
@@ -239,6 +259,7 @@
 				{
 					"fontFace": [
 						{
+<<<<<<< HEAD
 							"fontFamily": "Roboto",
 							"fontStyle": "normal",
 							"fontWeight": "400",
@@ -285,28 +306,39 @@
 					"fontFamily": "\"Josefin Sans\", sans-serif",
 					"name": "Josefin Sans",
 					"slug": "josefin-sans"
+=======
+							"fontFamily": "Atelia",
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"src": ["file:./assets/fonts/atelia/atelia-400-normal.woff2"],
+							"fontDisplay": "swap"
+						}
+					],
+					"fontFamily": "Atelia, sans-serif",
+					"name": "Atelia",
+					"slug": "atelia"
+				},
+				{
+					"fontFamily": "ui-sans-serif, system-ui, -apple-system, Helvetica Neue, Helvetica, Arial, sans-serif",
+					"name": "System Sans",
+					"slug": "sans"
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 				}
 			],
 			"fontSizes": [
 				{
 					"fluid": false,
-					"name": "Tiny",
-					"size": "0.625rem",
+					"name": "Tiny (Eyebrow)",
+					"size": "0.7rem",
 					"slug": "tiny"
 				},
 				{
-					"fluid": false,
-					"name": "Small",
-					"size": "0.75rem",
-					"slug": "small"
-				},
-				{
 					"fluid": {
-						"max": "1rem",
-						"min": "0.9rem"
+						"max": "1.05rem",
+						"min": "0.95rem"
 					},
-					"name": "Base",
-					"size": "1rem",
+					"name": "Body",
+					"size": "1.05rem",
 					"slug": "base"
 				},
 				{
@@ -455,7 +487,16 @@
 					}
 				}
 			},
+<<<<<<< HEAD
 			"core/heading": {
+=======
+			"core/button": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--atelia)"
+				}
+			},
+			"core/column": {
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 				"spacing": {
 					"padding": {
 						"bottom": "var(--wp--preset--spacing--8)",
@@ -484,6 +525,7 @@
 				}
 			}
 		},
+<<<<<<< HEAD
 		"elements": {
 			"button": {
 				"typography": {
@@ -494,35 +536,106 @@
 			"caption": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--roboto)"
+=======
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
+		},
+		"elements": {
+			"button": {
+				":active": {
+					"color": {
+						"background": "var(--wp--preset--color--base)",
+						"text": "var(--wp--preset--color--contrast)"
+					}
+				},
+				":focus": {
+					"border": {
+						"color": "var(--wp--preset--color--base)"
+					},
+					"color": {
+						"background": "var(--wp--preset--color--contrast)",
+						"text": "var(--wp--preset--color--base)"
+					}
+				},
+				":hover": {
+					"color": {
+						"background": "var(--wp--preset--color--contrast)",
+						"text": "var(--wp--preset--color--base)"
+					}
+				},
+				":visited": {
+					"color": {
+						"text": "var(--wp--preset--color--base)"
+					}
+				},
+				"border": {
+					"color": "var(--wp--preset--color--contrast)",
+					"radius": "0px",
+					"width": "1px"
+				},
+				"color": {
+					"background": "var(--wp--preset--color--contrast)",
+					"text": "var(--wp--preset--color--base)"
+				},
+				"spacing": {
+					"padding": {
+						"bottom": "var(--wp--preset--spacing--8)",
+						"left": "var(--wp--preset--spacing--24)",
+						"right": "var(--wp--preset--spacing--24)",
+						"top": "var(--wp--preset--spacing--8)"
+					}
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 				}
 			},
 			"h1": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--atelia)",
 					"fontSize": "var(--wp--preset--font-size--start-h-1)",
+<<<<<<< HEAD
 					"fontStyle": "normal",
 					"fontWeight": "300",
 					"lineHeight": "1",
 					"textTransform": "uppercase"
+=======
+					"fontWeight": "400",
+					"letterSpacing": "-0.02em",
+					"lineHeight": "1.2"
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 				}
 			},
 			"h2": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--atelia)",
 					"fontSize": "var(--wp--preset--font-size--start-h-2)",
+<<<<<<< HEAD
 					"fontStyle": "normal",
 					"fontWeight": "400",
 					"lineHeight": "1.1"
+=======
+					"fontWeight": "400",
+					"letterSpacing": "-0.02em",
+					"lineHeight": "1.2"
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 				}
 			},
 			"h3": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--atelia)",
 					"fontSize": "var(--wp--preset--font-size--start-h-3)",
+<<<<<<< HEAD
 					"fontStyle": "normal",
 					"fontWeight": "400",
+=======
+					"fontWeight": "600",
+					"letterSpacing": "0",
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 					"lineHeight": "1.2"
 				}
 			},
 			"h4": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--atelia)",
 					"fontSize": "var(--wp--preset--font-size--start-h-4)",
 					"fontStyle": "normal",
 					"fontWeight": "400",
@@ -531,6 +644,7 @@
 			},
 			"h5": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--atelia)",
 					"fontSize": "var(--wp--preset--font-size--start-h-5)",
 					"fontStyle": "normal",
 					"fontWeight": "400",
@@ -539,6 +653,7 @@
 			},
 			"h6": {
 				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--atelia)",
 					"fontSize": "var(--wp--preset--font-size--start-h-6)",
 					"fontStyle": "normal",
 					"fontWeight": "400",
@@ -547,6 +662,7 @@
 			},
 			"heading": {
 				"typography": {
+<<<<<<< HEAD
 					"fontFamily": "var(--wp--preset--font-family--josefin-sans)",
 					"fontStyle": "normal",
 					"fontWeight": "300",
@@ -556,10 +672,45 @@
 			"link": {
 				"color": {
 					"text": "var(--wp--preset--color--primary-hover)"
+=======
+					"fontFamily": "var(--wp--preset--font-family--atelia)",
+					"fontWeight": "600",
+					"lineHeight": "0.95"
+				}
+			},
+			"link": {
+				":active": {
+					"color": {
+						"text": "var(--wp--preset--color--accent)"
+					},
+					"typography": {
+						"textDecoration": "none"
+					}
+				},
+				":focus": {
+					"typography": {
+						"textDecoration": "underline dashed"
+					}
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--accent)"
+					},
+					"typography": {
+						"textDecoration": "underline"
+					}
+				},
+				"color": {
+					"text": "var(--wp--preset--color--contrast)"
+				},
+				"typography": {
+					"textDecoration": "underline"
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 				}
 			}
 		},
 		"spacing": {
+<<<<<<< HEAD
 			"blockGap": "var(--wp--preset--spacing--8)"
 		},
 		"typography": {
@@ -568,4 +719,31 @@
 			"lineHeight": "1.6"
 		}
 	}
+=======
+			"blockGap": "var(--wp--preset--spacing--16)",
+			"padding": {
+				"left": "var(--wp--preset--spacing--16)",
+				"right": "var(--wp--preset--spacing--16)"
+			}
+		},
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--sans)",
+			"fontSize": "var(--wp--preset--font-size--base)",
+			"fontWeight": "300",
+			"lineHeight": "1.65"
+		}
+	},
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header",
+			"title": "Header"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer Credit Area"
+		}
+	]
+>>>>>>> 627e0935e60de76cd1d1662a3b1653bbbcc8c0b9
 }
